@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import { Route, Switch, Link } from 'react-router-dom'
+import Home from './components/Home'
+import SexEd from './components/issues/SexEd'
+import LilSebastian from './components/issues/LilSebastian'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render () {
+    return (
+      <div className='App'>
+        <Switch>
+          <Route
+            path='/leslieknope2020'
+            component={routerProps => <Home {...routerProps} />}
+          />
+          <Route
+            path='/sexed'
+            component={routerProps => <SexEd {...routerProps} />}
+          />
+          <Route
+            path='/lilsebastian'
+            component={routerProps => <LilSebastian {...routerProps} />}
+          />
+          <p>This is my new app!</p>
+        </Switch>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
