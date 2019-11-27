@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 
@@ -7,6 +7,11 @@ class Home extends React.Component {
   render () {
     return (
       <div>
+        <Link to='/donate/leslieknope2020' style={{ textDecoration: 'none' }}>
+          <div className='donationsBar'>
+            <h1 className='giving-text'>Give Now</h1>
+          </div>
+        </Link>
         <div className='video-wrapper'>
           <ReactPlayer
             className='react-player'
@@ -14,7 +19,7 @@ class Home extends React.Component {
             playing='true'
             loop='true'
             width='100%'
-            height='80%'
+            height='70%'
           />
         </div>
         <div className='twitter'>
