@@ -6,6 +6,7 @@ import SexEd from './components/issues/SexEd'
 import LilSebastian from './components/issues/LilSebastian'
 import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
+import TopMenu from './TopMenu'
 
 class App extends React.Component {
   render () {
@@ -15,6 +16,7 @@ class App extends React.Component {
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
         />
+        <TopMenu />
         <Switch>
           <Route
             path='/leslieknope2020'
