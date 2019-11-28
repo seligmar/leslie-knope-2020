@@ -9,40 +9,26 @@ const TopMenu = props => {
   }
 
   const dropdown = {
-    'background-color': '#b7e4cf',
-    color: '#232444',
+    'background-color': '#ffea00',
+    color: '#ffea00',
     'font-size': '1.2rem',
-    'border-color': '#b7e4cf',
+    'border-color': '#ffea00',
     'padding- left': '4%',
     'padding - right': '4%'
   }
   const dropdown1 = {
-    'background-color': '#b7e4cf',
-    color: '#232444',
+    'background-color': '#ffea00',
+    color: '#ffea00',
     'text-align': 'left',
     'box-shadow': 'none',
-    'border-color': '#b7e4cf',
+    'border-color': '#ffea00',
     'padding- left': '4%',
     'padding - right': '4%'
   }
 
   return (
     <div className='top-menu'>
-      {/* </div> */}
-      {/* any way to call up user donation and event info?
-if donations total 20 or more s
-short of limit, ask to give $20 */}
-      <i class='align justify icon' style={styles} />
-      {props.loggedIn ? (
-        <button className='button-login' onClick={() => props.logout()}>
-          Log Out
-        </button>
-      ) : (
-        <button className='button-login' onClick={() => props.showLogIn()}>
-          Log In
-        </button>
-      )}
-      <Link to='/elizabethwarren2020'>
+      <Link to='/leslieknope2020'>
         <button className='button-login'>Home</button>
       </Link>
       <div style={dropdown} class='ui compact menu'>
@@ -51,31 +37,31 @@ short of limit, ask to give $20 */}
           <i class='dropdown icon' />
           <div style={dropdown1} class='menu'>
             <div class='item'>
-              <Link to='/healthcare/elizabethwarren2020'>
-                <div className='button-dropdown'>HealthCare</div>
+              <Link to='/sex-ed/leslieknope2020'>
+                <div className='button-dropdown'>Sex Ed</div>
               </Link>
-              <Link to='/choice/elizabethwarren2020'>
-                <button className='button-dropdown'>Choice</button>
+              <Link to='/lilsebastian/leslieknope2020'>
+                <button className='button-dropdown'>'Lil Sebastian</button>
               </Link>
-              <Link to='/labor/elizabethwarren2020'>
-                <div className='button-dropdown'>Labor</div>
+              <Link to='/gender-equality/leslieknope2020'>
+                <div className='button-dropdown'>Gender Equality</div>
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <Link to='/donate/elizabethwarren2020'>
+      <Link to='/donate/leslieknope2020'>
         <button className='button-login'>Give Now</button>
       </Link>
-      <Link to='/getinvolved/elizabethwarren2020'>
+      {/* <Link to='/getinvolved/elizabethwarren2020'>
         <button className='button-login'>Get Involved</button>
-      </Link>
-      <Link to='/about/elizabethwarren2020'>
+      </Link> */}
+      {/* <Link to='/about/elizabethwarren2020'>
         <button className='button-login'>About</button>
-      </Link>
-      <Link to='/my-reps/elizabethwarren2020'>
+      </Link> */}
+      {/* <Link to='/my-reps/elizabethwarren2020'>
         <button className='button-login'>Find My Reps</button>
-      </Link>
+      </Link> */}
       {/*
       {props.showLogInState ? (
         <UserIndex

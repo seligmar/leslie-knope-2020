@@ -12,26 +12,26 @@ class App extends React.Component {
   render () {
     return (
       <div className='App'>
+        <TopMenu />
         <Route
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
         />
-        <TopMenu />
         <Switch>
           <Route
             path='/leslieknope2020'
             component={routerProps => <Home {...routerProps} />}
           />
           <Route
-            path='/sex-ed'
+            path='/sex-ed/leslieknope2020'
             component={routerProps => <SexEd {...routerProps} />}
           />
           <Route
-            path='/lilsebastian'
+            path='/lilsebastian/leslieknope2020'
             component={routerProps => <LilSebastian {...routerProps} />}
           />
           <Route
-            path='/gender-equality'
+            path='/gender-equality/leslieknope2020'
             component={routerProps => <GenderEquaity {...routerProps} />}
           />
           <p>This is my new app!</p>
