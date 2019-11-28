@@ -71,3 +71,20 @@ yellow: #ffea00;
   color:#ffea00;
   width: 100%;
 }
+
+.issue-page {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+youtube-block-grid {
+  padding-top: 3%;
+}
+
+.youtube {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color:  #1eb25c; 
+  padding: 1%;
+  margin-top: 3%;
+}
