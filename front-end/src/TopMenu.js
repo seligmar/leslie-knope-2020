@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import LogIn from './LogIn'
 
 const TopMenu = props => {
-  // const styles = {
-  //   position: 'absolute',
-  //   left: '2%',
-  //   top: '3.5%'
-  // }
+  const styles = {
+    position: 'absolute',
+    left: '2%',
+    top: '3.5%'
+  }
 
   const dropdown = {
     'background-color': '#ffea00',
@@ -32,6 +32,16 @@ const TopMenu = props => {
       <Link to='/leslieknope2020'>
         <button className='button-login'>Home</button>
       </Link>
+      <i class='align justify icon' style={styles} />
+      {props.loggedIn ? (
+        <button className='button-login' onClick={() => props.logout()}>
+          Log Out
+        </button>
+      ) : (
+        <button className='button-login' onClick={() => props.showLogIn()}>
+          Log In
+        </button>
+      )}
       <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues

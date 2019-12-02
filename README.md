@@ -1,12 +1,12 @@
 https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
-Project Title
+# Leslie Knope 2020
 
-The goal of this app is to provide an open-source template for individuals running for office to launch their own websites. The app uses React and a Rails API, and takes Leslie Knope of Parks and Rec fame as a stand-in-candidate. 
+# The purpose of this app is to provide an open-source template for individuals running for office to launch their own websites. The app uses React and a Rails API, and takes Leslie Knope of Parks and Rec fame as a stand-in-candidate. 
 
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+# Getting Started
+# These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Prerequisites
 What things you need to install the software and how to install them
@@ -38,11 +38,19 @@ Deployment
 Add additional notes about how to deploy this on a live system
 
 Built With
+
+
 Dropwizard - The web framework used
 Maven - Dependency Management
 ROME - Used to generate RSS Feeds
 Contributing
 Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+
+https://github.com/sweetalert2/sweetalert2-react-content  - alerts 
+
+https://github.com/CookPete/react-player - react player github
+
+### find the twitter npm package used 
 
 Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
