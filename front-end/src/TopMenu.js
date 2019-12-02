@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LogIn from './LogIn'
 
 const TopMenu = props => {
-  // const styles = {
-  //   position: 'absolute',
-  //   left: '2%',
-  //   top: '3.5%'
-  // }
+  const styles = {
+    position: 'absolute',
+    left: '2%',
+    top: '3.5%'
+  }
 
   const dropdown = {
     'background-color': '#ffea00',
-    color: '#ffea00',
+    color: '#1eb25c',
     'font-size': '1.2rem',
     'border-color': '#ffea00',
     'padding-left': '4%',
@@ -31,7 +32,17 @@ const TopMenu = props => {
       <Link to='/leslieknope2020'>
         <button className='button-login'>Home</button>
       </Link>
-      {/* <div style={dropdown} class='ui compact menu'>
+      <i class='align justify icon' style={styles} />
+      {props.loggedIn ? (
+        <button className='button-login' onClick={() => props.logout()}>
+          Log Out
+        </button>
+      ) : (
+        <button className='button-login' onClick={() => props.showLogIn()}>
+          Log In
+        </button>
+      )}
+      <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues
           <i class='dropdown icon' />
@@ -49,8 +60,8 @@ const TopMenu = props => {
             </div>
           </div>
         </div>
-      </div> */}
-      <button className='button-login'>Issues</button>
+      </div>
+      {/* <button className='button-login'>Issues</button> */}
       <Link to='/donate/leslieknope2020'>
         <button className='button-login'>Give Now</button>
       </Link>
