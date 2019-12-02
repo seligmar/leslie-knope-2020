@@ -49,6 +49,8 @@ https://github.com/sweetalert2/sweetalert2-react-content  - alerts
 
 https://github.com/CookPete/react-player - react player github
 
+https://react.semantic-ui.com/ styling suplimented with semantic ui, specifically the css package 
+
 ### find the twitter npm package used 
 
 Versioning
