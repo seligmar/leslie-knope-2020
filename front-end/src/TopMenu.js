@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import LogIn from './LogIn'
+import UserIndex from './UserIndex'
 
 const TopMenu = props => {
   const styles = {
@@ -74,7 +75,7 @@ const TopMenu = props => {
       {/* <Link to='/my-reps/elizabethwarren2020'>
         <button className='button-login'>Find My Reps</button>
       </Link> */}
-      {/*
+
       {props.showLogInState ? (
         <UserIndex
           showLogIn={props.showLogIn}
@@ -84,11 +85,10 @@ const TopMenu = props => {
           HideLogIn={props.HideLogIn}
         />
       ) : null}
-      {/* { */}
-      {/* props.loggedIn ?
-          <p>Welcome back, {props.username}! Thank you for your support!</p>
-          : null
-      } */}
+
+      {props.loggedIn ? (
+        <p>Welcome back, {props.username}! Thank you for your support!</p>
+      ) : null}
     </div>
   )
 }
