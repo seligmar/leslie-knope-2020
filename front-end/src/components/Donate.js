@@ -1,4 +1,5 @@
 import React from 'react'
+import './donate.css'
 import { Link } from 'react-router-dom'
 
 class Donate extends React.Component {
@@ -47,7 +48,7 @@ class Donate extends React.Component {
                     Next
                   </button>
                 </div>
-                ) : null}
+                {/* ) : null} */}
                 {/* {this.state.nameEntered ? ( */}
                 <div>
                   <div style={header}>Please Enter Your Billing Address:</div>
@@ -76,60 +77,60 @@ class Donate extends React.Component {
                   </button>
                 </div>
                 {/* ) : null} */}
-                {this.state.addressEntered ? (
-                  <div>
-                    <div style={header}> Billing Information</div>
-                    <label>Card Number</label>
-                    <input
-                      type='text'
-                      name='cardnumber'
-                      maxlength='16'
-                      placeholder='Card #'
-                    />
-                    <label>CVC</label>
-                    <input
-                      type='text'
-                      name='cvc'
-                      maxlength='3'
-                      placeholder='CVC'
-                    />
-                    <label>Expiration</label>
-                    <div class='field'>
-                      <select
-                        class='ui fluid search dropdown'
-                        name='expire-month'
-                      >
-                        <option value=''>Month</option>
-                        <option value='1'>January</option>
-                        <option value='2'>February</option>
-                        <option value='3'>March</option>
-                        <option value='4'>April</option>
-                        <option value='5'>May</option>
-                        <option value='6'>June</option>
-                        <option value='7'>July</option>
-                        <option value='8'>August</option>
-                        <option value='9'>September</option>
-                        <option value='10'>October</option>
-                        <option value='11'>November</option>
-                        <option value='12'>December</option>
-                      </select>
-                    </div>
-                    <input
-                      type='text'
-                      name='expire-year'
-                      maxlength='4'
-                      placeholder='Year'
-                    />
-                    <br /> <br />
-                    <div
-                      // onClick={e => this.donateNew(e)}
-                      class='ui button'
-                      style={buttons}
+                {/* {this.state.addressEntered ? ( */}
+                <div>
+                  <div style={header}> Billing Information</div>
+                  <label>Card Number</label>
+                  <input
+                    type='text'
+                    name='cardnumber'
+                    maxlength='16'
+                    placeholder='Card #'
+                  />
+                  <label>CVC</label>
+                  <input
+                    type='text'
+                    name='cvc'
+                    maxlength='3'
+                    placeholder='CVC'
+                  />
+                  <label>Expiration</label>
+                  <div class='field'>
+                    <select
+                      class='ui fluid search dropdown'
+                      name='expire-month'
                     >
-                      Donate Now
-                    </div>
+                      <option value=''>Month</option>
+                      <option value='1'>January</option>
+                      <option value='2'>February</option>
+                      <option value='3'>March</option>
+                      <option value='4'>April</option>
+                      <option value='5'>May</option>
+                      <option value='6'>June</option>
+                      <option value='7'>July</option>
+                      <option value='8'>August</option>
+                      <option value='9'>September</option>
+                      <option value='10'>October</option>
+                      <option value='11'>November</option>
+                      <option value='12'>December</option>
+                    </select>
                   </div>
-                ) : null}
+                  <input
+                    type='text'
+                    name='expire-year'
+                    maxlength='4'
+                    placeholder='Year'
+                  />
+                  <br /> <br />
+                  <div
+                    // onClick={e => this.donateNew(e)}
+                    class='ui button'
+                    style={buttons}
+                  >
+                    Donate Now
+                  </div>
+                </div>
+                {/* ) : null} */}
               </form>
             </div>
           </div>
