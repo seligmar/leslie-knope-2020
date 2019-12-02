@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LogIn from './LogIn'
 
 const TopMenu = props => {
   // const styles = {
