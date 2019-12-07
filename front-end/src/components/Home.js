@@ -22,6 +22,7 @@ class Home extends React.Component {
             height='70%'
           />
         </div>
+
         <div className='twitter'>
           <div className='twitter-box'>
             <TwitterTimelineEmbed
