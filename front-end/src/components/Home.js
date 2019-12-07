@@ -35,6 +35,19 @@ class Home extends React.Component {
             />
           </div>
         </div>
+
+        <div className='youtube-block-grid'>
+          <div className='youtube'>
+            <iframe
+              width='560'
+              height='315'
+              src='https://www.youtube.com/embed/Xcdhpn-DXTA'
+              frameborder='0'
+              allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+              allowfullscreen
+            />
+          </div>
+        </div>
       </div>
       //  amazing youtube video of ice rink scene:  <https://www.youtube.com/watch?v=Xcdhpn-DXTA>
     )

@@ -7,11 +7,10 @@ const LilSebastian = () => {
       <div className='youtube-block-grid'>
         <div className='youtube'>
           <iframe
-            title='5000 Candles in the Wind'
-            width='100%'
-            height='580'
-            src='https://www.youtube.com/embed/ZbUf9mnm5TA'
-            frameBorder='0'
+            width='560'
+            height='315'
+            src='https://www.youtube.com/embed/Xcdhpn-DXTA'
+            frameborder='0'
             allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
             allowfullscreen
           />

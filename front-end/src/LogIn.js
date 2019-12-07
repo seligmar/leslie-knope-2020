@@ -26,7 +26,7 @@ const LogIn = props => {
             // onSubmit={e => props.logIn(e)}
             className='ui form'
           >
-            {' '}
+            {/* {' '} */}
             <button
               style={xButton}
               // onClick={() => props.HideLogIn()}
