@@ -7,7 +7,7 @@
 
 .Menu {
   color: #fff; 
-  background-color: #b61b28;
+  background-color: #1eb25c;
   /* max-height: 100vh; */
   margin-top: 3%
 }
@@ -24,6 +24,9 @@
   grid-column-end: 2; 
   grid-row-start: 2; 
   grid-row-end: 2; 
+  border-color: #1eb25c;
+  border-style: solid;
+  border-width: 10px;
   /* border-color:  #b7e4cf;
   border-style: solid; 
   border-width: '1px'; */
@@ -36,3 +39,15 @@
   align-items: center;
   width: 100%;
 }
+
+.links {
+  grid-column-start: 1; 
+  grid-column-end: 1; 
+  grid-row-start: 1; 
+  grid-row-end: 5; 
+  /* background-image: url('./images/34b0af99.jpg') */
+}
+
+.link {
+  color: black; 
+ }

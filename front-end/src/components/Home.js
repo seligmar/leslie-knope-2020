@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
-import BottomBar from './BottomBar'
 
 class Home extends React.Component {
   render () {
@@ -23,7 +22,6 @@ class Home extends React.Component {
             height='70%'
           />
         </div>
-
         <div className='twitter'>
           <div className='twitter-box'>
             <TwitterTimelineEmbed
@@ -48,7 +46,6 @@ class Home extends React.Component {
             />
           </div>
         </div>
-        <BottomBar />
       </div>
     )
   }
