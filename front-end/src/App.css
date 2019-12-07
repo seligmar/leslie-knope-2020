@@ -36,7 +36,7 @@ yellow: #ffea00;
   margin: 0%;
   /* margin-left: auto;
   margin-right: auto; */
-  color: #1eb25c;
+  color: black;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -44,7 +44,7 @@ yellow: #ffea00;
 
 .giving-text {
   padding: 2%;
-  color:  #1eb25c;
+  color: 'black';
   margin: 0%;
 }
 
