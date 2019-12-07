@@ -36,7 +36,7 @@ yellow: #ffea00;
   margin: 0%;
   /* margin-left: auto;
   margin-right: auto; */
-  color: #1eb25c;
+  color: black;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -44,13 +44,13 @@ yellow: #ffea00;
 
 .giving-text {
   padding: 2%;
-  color:  #1eb25c;
+  color: 'black';
   margin: 0%;
 }
 
 .button-login {
   cursor: pointer;
-  color:  #1eb25c;
+  color:  black;
   padding-left: 3%;
   padding-right: 3%;
   text-align: center;
@@ -68,7 +68,7 @@ yellow: #ffea00;
   background-color: #ffea00; 
   margin-left: auto;
   margin-right: auto;
-  color:#ffea00;
+  color: 'black';
   width: 100%;
 }
 
@@ -77,7 +77,7 @@ yellow: #ffea00;
   margin-right: 10%;
 }
 
-youtube-block-grid {
+.youtube-block-grid {
   padding-top: 3%;
 }
 
@@ -87,4 +87,19 @@ youtube-block-grid {
   background-color:  #1eb25c; 
   padding: 1%;
   margin-top: 3%;
+}
+
+.twitter {
+  padding-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+ 
+}
+
+.twitter-box{
+  background-color: #fff; 
+  padding: 1%;
+  border-color: #1eb25c;
+  border-style: solid;
+  border-width: 10px;
 }

@@ -11,6 +11,10 @@ https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 # Prerequisites
 What things you need to install the software and how to install them
 
+To include the Google Map functionality, you will need to aquire a Google API key and create a file to gitnore. Informaiton about how to do so is available here: 
+
+https://gist.github.com/derzorngottes/3b57edc1f996dddcab25
+
 # Give examples
 Installing
 A step by step series of examples that tell you how to get a development env running

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
+import BottomBar from './BottomBar'
 
 class Home extends React.Component {
   render () {
@@ -22,6 +23,7 @@ class Home extends React.Component {
             height='70%'
           />
         </div>
+
         <div className='twitter'>
           <div className='twitter-box'>
             <TwitterTimelineEmbed
@@ -34,8 +36,20 @@ class Home extends React.Component {
             />
           </div>
         </div>
+        <div className='youtube-block-grid'>
+          <div className='youtube'>
+            <iframe
+              width='560'
+              height='315'
+              src='https://www.youtube.com/embed/Xcdhpn-DXTA'
+              frameborder='0'
+              allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+              allowfullscreen
+            />
+          </div>
+        </div>
+        <BottomBar />
       </div>
-      //  amazing youtube video of ice rink scene:  <https://www.youtube.com/watch?v=Xcdhpn-DXTA>
     )
   }
 }

@@ -12,7 +12,7 @@ const TopMenu = props => {
 
   const dropdown = {
     'background-color': '#ffea00',
-    color: '#1eb25c',
+    color: 'black',
     'font-size': '1.2rem',
     'border-color': '#ffea00',
     'padding-left': '4%',
@@ -20,7 +20,7 @@ const TopMenu = props => {
   }
   const dropdown1 = {
     'background-color': '#ffea00',
-    color: '#ffea00',
+    color: 'black',
     'text-align': 'left',
     'box-shadow': 'none',
     'border-color': '#ffea00',
@@ -34,15 +34,22 @@ const TopMenu = props => {
         <button className='button-login'>Home</button>
       </Link>
       <i class='align justify icon' style={styles} />
-      {props.loggedIn ? (
-        <button className='button-login' onClick={() => props.logout()}>
-          Log Out
-        </button>
-      ) : (
-        <button className='button-login' onClick={() => props.showLogIn()}>
-          Log In
-        </button>
-      )}
+      {/* {props.loggedIn ? ( */}
+      <button
+        className='button-login'
+        // onClick={() => props.logout()}
+      >
+        Log Out
+      </button>
+      {/* // ) : ( */}
+      <button
+        className='button-login'
+        // onClick={() => props.showLogIn()}
+      >
+        Log In
+      </button>
+      <LogIn />
+      {/* )} */}
       <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues
@@ -75,7 +82,6 @@ const TopMenu = props => {
       {/* <Link to='/my-reps/elizabethwarren2020'>
         <button className='button-login'>Find My Reps</button>
       </Link> */}
-
       {props.showLogInState ? (
         <UserIndex
           showLogIn={props.showLogIn}
@@ -85,7 +91,6 @@ const TopMenu = props => {
           HideLogIn={props.HideLogIn}
         />
       ) : null}
-
       {props.loggedIn ? (
         <p>Welcome back, {props.username}! Thank you for your support!</p>
       ) : null}
