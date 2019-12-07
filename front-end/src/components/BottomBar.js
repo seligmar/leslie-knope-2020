@@ -17,44 +17,43 @@ const BottomBar = () => {
     <div className='Menu'>
       <div className='menu-grid'>
         <div className='links'>
-          <Link to='/elizabethwarren2020' className='link'>
+          <Link to='/leslieknope2020' className='link'>
             <div className='about-box'>
               <h1>Home</h1>
             </div>
           </Link>
-          <Link to='/my-reps/elizabethwarren2020' className='link'>
-            <div className='my-reps'>
-              <h1>Find My Reps</h1>
-            </div>
-          </Link>
-          <Link to='/donate/elizabethwarren2020' className='link'>
+          <Link to='/donate/leslieknope2020' className='link'>
             <div className='donation-box'>
               <h1>Give Now</h1>
             </div>
           </Link>
-          <Link to='/getinvolved/elizabethwarren2020' className='link'>
+          {/* <Link to='/getinvolved/elizabethwarren2020' className='link'>
             <div className='get-involved-box'>
               <h1 className='involved-button'>Get Involved</h1>
             </div>
-          </Link>
-          <Link to='/about/elizabethwarren2020' className='link'>
+          </Link> */}
+          {/* <Link to='/about/elizabethwarren2020' className='link'>
             <div className='about-box'>
               <h1>About</h1>
             </div>
-          </Link>
+          </Link> */}
         </div>
         <div className='menu-gif'>
           <iframe
-            src='https://giphy.com/embed/LqrDQpeG0ojjfEjKCb'
+            src='https://giphy.com/embed/p0OJ2Pn79Qqu4'
+            width='384'
             height='480'
             frameBorder='0'
             class='giphy-embed'
             allowFullScreen
           />
+          <p>
+            <a href='https://giphy.com/gifs/leslie-knope-p0OJ2Pn79Qqu4'>
+              via GIPHY
+            </a>
+          </p>
         </div>
       </div>
-      {/*  */}
-
       <div className='social-media-grid'>
         <div className='four ui icon buttons'>
           <div className='social-media'>

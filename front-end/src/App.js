@@ -8,6 +8,7 @@ import LilSebastian from './components/issues/LilSebastian'
 import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
 import TopMenu from './TopMenu'
+import BottomBar from './components/BottomBar'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -41,6 +42,7 @@ class App extends React.Component {
           />
           <p>This is my new app!</p>
         </Switch>
+        <BottomBar />
       </div>
     )
   }
