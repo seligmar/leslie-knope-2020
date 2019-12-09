@@ -9,6 +9,7 @@ import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
 import TopMenu from './TopMenu'
 import BottomBar from './components/BottomBar'
+import Home2 from './Home2'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
@@ -27,6 +28,10 @@ class App extends React.Component {
           <Route
             path='/leslieknope2020'
             component={routerProps => <Home {...routerProps} />}
+          />
+          <Route
+            path='/leslieknope2020_2'
+            component={routerProps => <Home2 {...routerProps} />}
           />
           <Route
             path='/sex-ed/leslieknope2020'
