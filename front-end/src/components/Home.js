@@ -37,8 +37,8 @@ class Home extends React.Component {
         <div className='youtube-block-grid'>
           <div className='youtube'>
             <iframe
-              width='560'
-              height='315'
+              width='100%'
+              height='560'
               src='https://www.youtube.com/embed/Xcdhpn-DXTA'
               frameborder='0'
               allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
