@@ -1,0 +1,15 @@
+.banner {
+  background-image: url('https://img.nbc.com/sites/nbcunbc/files/files/images/2019/6/11/ParksAndRec-Web-DynamicLead-Mobile-1114x891-ALT.jpg');
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.banner > p {
+  color: white;
+  padding: 10px;
+}
