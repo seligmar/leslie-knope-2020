@@ -14,8 +14,8 @@ class Home2 extends React.Component {
           </div>
         </Link>
         <div class='banner'>
-          <p class='h1 display-4'>Find Your Coffee Cup</p>
-          <p class='lead'>We have them all in one place!</p>
+          <p class='h1 display-4'>Leslie Knope 2020</p>
+          {/* <p class='lead'>Dream Big!</p> */}
         </div>
       </div>
     )

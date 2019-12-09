@@ -12,4 +12,14 @@
 .banner > p {
   color: white;
   padding: 10px;
+  font-size: 40px;
+  margin-left: 65%;
+  color: black;
+}
+
+@media (max-width: 576px) {
+  .banner {
+    align-items: flex-start;
+    height: 400px;
+  }
 }
