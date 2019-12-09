@@ -53,32 +53,53 @@ const LilSebastian = () => {
           <div> Spread your wings and fly </div>
           <div> Spread your wings and fly</div>
         </div>
-        <iframe
-          src='https://giphy.com/embed/3liPzBhoQzKXm'
-          width='480'
-          height='360'
-          frameBorder='0'
-          class='giphy-embed'
-          allowFullScreen
-        />
-        <p>
-          <a href='https://giphy.com/gifs/candles-3liPzBhoQzKXm'>via GIPHY</a>
-        </p>
       </div>
-
-      <iframe
-        src='https://giphy.com/embed/fYzWFIuzgRt0k'
-        width='480'
-        height='390'
-        frameBorder='0'
-        class='giphy-embed'
-        allowFullScreen
-      />
-      <p>
-        <a href='https://giphy.com/gifs/spooky-candles-candlelight-fYzWFIuzgRt0k'>
-          via GIPHY
-        </a>
-      </p>
+      <div class='wrapper'>
+        <div>
+          {' '}
+          <iframe
+            src='https://giphy.com/embed/l9o9zrJUPAcVO'
+            width='320'
+            height='480'
+            frameBorder='0'
+            class='giphy-embed'
+            allowFullScreen
+          />
+        </div>
+        <div>
+          {' '}
+          <iframe
+            src='https://giphy.com/embed/l9o9zrJUPAcVO'
+            width='320'
+            height='480'
+            frameBorder='0'
+            class='giphy-embed'
+            allowFullScreen
+          />
+        </div>
+        <div>
+          {' '}
+          <iframe
+            src='https://giphy.com/embed/l9o9zrJUPAcVO'
+            width='320'
+            height='480'
+            frameBorder='0'
+            class='giphy-embed'
+            allowFullScreen
+          />
+        </div>
+        <div>
+          {' '}
+          <iframe
+            src='https://giphy.com/embed/l9o9zrJUPAcVO'
+            width='320'
+            height='480'
+            frameBorder='0'
+            class='giphy-embed'
+            allowFullScreen
+          />
+        </div>
+      </div>
     </div>
   )
 }
