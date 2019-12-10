@@ -45,7 +45,7 @@ class App extends React.Component {
             path='/gender-equality/leslieknope2020'
             component={routerProps => <GenderEquaity {...routerProps} />}
           />
-          <p>This is my new app!</p>
+          <Route component={() => <h1>404 - Page Not Found</h1>} />
         </Switch>
         <BottomBar />
       </div>
