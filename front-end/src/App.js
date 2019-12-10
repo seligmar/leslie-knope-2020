@@ -21,31 +21,37 @@ class App extends React.Component {
       <div className='App'>
         <TopMenu />
         <Route
+          exact
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
         />
         <Switch>
           <Route
+            exact
             path='/leslieknope2020'
             component={routerProps => <Home {...routerProps} />}
           />
           <Route
+            exact
             path='/leslieknope2020_2'
             component={routerProps => <Home2 {...routerProps} />}
           />
           <Route
+            exact
             path='/sex-ed/leslieknope2020'
             component={routerProps => <SexEd {...routerProps} />}
           />
           <Route
+            exact
             path='/lilsebastian/leslieknope2020'
             component={routerProps => <LilSebastian {...routerProps} />}
           />
           <Route
+            exact
             path='/gender-equality/leslieknope2020'
             component={routerProps => <GenderEquaity {...routerProps} />}
           />
-          <p>This is my new app!</p>
+          <Route component={() => <h1>404 - Page Not Found</h1>} />
         </Switch>
         <BottomBar />
       </div>
