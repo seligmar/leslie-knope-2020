@@ -2,7 +2,7 @@ https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 
 # Leslie Knope 2020
 
- The purpose of this app is to provide an open-source template for individuals running for office to launch their own websites. The app uses React and a Rails API, and takes Leslie Knope of Parks and Rec fame as a stand-in-candidate. 
+ This app aims to provide an open-source template for individuals running for office to launch their own websites. The app uses React and a Rails API, and takes Leslie Knope of Parks and Recreation fame as a stand-in-candidate. 
 
 
 # Getting Started

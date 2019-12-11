@@ -1,11 +1,23 @@
 import React from 'react'
 import APIKey from './APIKey'
 
-const API = props => {
-  return <div />
+const base_url = 'http://localhost:3001/'
+const signin_url = base_url + '/signin'
+
+const post = (url, data) => {
+  return fetch(url, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then(resp => resp.json())
 }
 
-export default API
+const signin = ({ username, password }) =>
+  post(signin_url, { username, password })
+
+export default { signin }
 
 // 6. Be sure to replace every instance of the API keys with these new variables.
 // E.g. if you had:
