@@ -17,6 +17,7 @@ and then run bundle install again.
 
 rails s -p 3001 (or whichever port)
 
+prop drilling this app uses Redux; for an example using regulr React please see an alternative framework I created here: https://github.com/seligmar/Campaign-2020
 # Prerequisites
 What things you need to install the software and how to install them
 
