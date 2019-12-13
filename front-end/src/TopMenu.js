@@ -73,6 +73,9 @@ const TopMenu = props => {
       <Link to='/donate/leslieknope2020'>
         <button className='button-login'>Give Now</button>
       </Link>
+      <Link to='about/leslieknope2020'>
+        <button className='button-login'>About</button>
+      </Link>
       {/* <Link to='/getinvolved/elizabethwarren2020'>
         <button className='button-login'>Get Involved</button>
       </Link> */}
