@@ -5,16 +5,16 @@ const About = () => {
     <div>
       <img src='http://sartorialgeek.com/wp-content/uploads/2019/09/5824aa9046e27a1c008b5eec-750-563.jpg' />
       <p>
-        Leslie Barbara Knope (/ˈnoʊp/ NOHP) is a fictional character and the
-        main protagonist of the NBC sitcom Parks and Recreation. She is
-        portrayed by former SNL cast member Amy Poehler. For most of the show's
-        run, she serves as Deputy Director of the Parks and Recreation
-        Department of the fictional city of Pawnee, Indiana. An over-achiever,
-        Knope believes the government should serve the people. The character has
-        evolved greatly over the seasons, initially portrayed by Poehler as an
-        exaggerated scatterbrain before gradually shifting to a more subtle
-        performance. Poehler's performance as Knope has been nominated for
-        several awards, winning a 2014 Golden Globe.
+        Leslie Barbara Knope is a fictional character and the main protagonist
+        of the NBC sitcom Parks and Recreation. She is portrayed by former SNL
+        cast member Amy Poehler. For most of the show's run, she serves as
+        Deputy Director of the Parks and Recreation Department of the fictional
+        city of Pawnee, Indiana. An over-achiever, Knope believes the government
+        should serve the people. The character has evolved greatly over the
+        seasons, initially portrayed by Poehler as an exaggerated scatterbrain
+        before gradually shifting to a more subtle performance. Poehler's
+        performance as Knope has been nominated for several awards, winning a
+        2014 Golden Globe.
       </p>
       <p>
         Knope was born on January 18, 1975 (S4: E3) in Eagleton, Indiana due to
