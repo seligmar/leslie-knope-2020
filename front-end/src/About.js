@@ -3,6 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <div>
+      <img src='http://sartorialgeek.com/wp-content/uploads/2019/09/5824aa9046e27a1c008b5eec-750-563.jpg' />
       <p>
         Leslie Barbara Knope (/ˈnoʊp/ NOHP) is a fictional character and the
         main protagonist of the NBC sitcom Parks and Recreation. She is
