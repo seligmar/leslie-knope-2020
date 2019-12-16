@@ -4,6 +4,7 @@ import './index.css'
 import App from './App'
 import ScrollToTop from './components/ScrollToTop'
 import { BrowserRouter } from 'react-router-dom'
+import { createStore } from 'redux'
 
 ReactDOM.render(
   <BrowserRouter>
