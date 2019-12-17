@@ -34,22 +34,13 @@ const TopMenu = props => {
         <button className='button-login'>Home</button>
       </Link>
       <i class='align justify icon' style={styles} />
-      {/* {props.loggedIn ? ( */}
-      <button
-        className='button-login'
-        // onClick={() => props.logout()}
-      >
+      <button id='logout' className='button-login'>
         Log Out
       </button>
-      {/* // ) : ( */}
-      <button
-        className='button-login'
-        // onClick={() => props.showLogIn()}
-      >
+      <button id='login' className='button-login'>
         Log In
       </button>
       <LogIn />
-      {/* )} */}
       <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues
