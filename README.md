@@ -20,7 +20,24 @@ rails s -p 3001 (or whichever port)
 To prevent the need for 'prop drilling' and other challenges related to state, this app uses Redux; for an example of a similar project using regulr React please see an alternative framework I created here: https://github.com/seligmar/Campaign-2020
 
 # Prerequisites
-What things you need to install the software and how to install them
+
+To launch the app, you will need to run both
+
+```bundle install```
+
+and
+
+```npm start```
+
+This project uses bcrypt with a username and one-way hashed encryption using bcrypt
+
+You may need to manually activate gem 'rack-cors' gem 'bcrypt', '~> 3.1.7' and then run bundle install again.
+
+To launch the APIs called as currently written will require that you run:
+
+```rails s -p 3001```
+
+You will also need to request both ProPublica and Google API keys.
 
 To include the Google Map functionality, you will need to aquire a Google API key and create a file to gitnore. Informaiton about how to do so is available here: 
 
@@ -66,9 +83,9 @@ https://github.com/CookPete/react-player - react player github
 
 https://react.semantic-ui.com/ styling suplimented with semantic ui, specifically the css package 
 
-### find the twitter npm package used 
+https://www.npmjs.com/package/react-twitter-embed - embed tweets
 
-Versioning
+# Versioning
 We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 # Authors
@@ -79,10 +96,13 @@ See also the list of contributors who participated in this project.
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 # Acknowledgments
-Hat tip to anyone whose code was used
-Inspiration
-etc
+My entire cohort in London (class beginning 07/15/2019) and my instructors throughout the program were remarkable coders and human beings and I am very thankful to have been able to work with all of them.
 
+I additionally referenced the youtube code-alongs of Leigh Halliday and Traversy Media to create the google map.
+
+https://www.youtube.com/watch?time_continue=172&v=Pf7g32CwX_s - Leigh Halliday
+
+https://www.youtube.com/watch?v=pRiQeo17u6c - Traversy Media
 
 "Parks and Recreation" is a production of Deedle-Dee Productions, Fremulon, 3 Arts Entertainment and Universal Television. Along with Daniels and Schur, Howard Klein ("The Office") and David Miner ("30 Rock"), Daniel J. Goor (Late Night with Conan O'Brien") and Morgan Sackett ("Seinfeld") also serve as executive producers for the series. https://www.nbc.com/parks-and-recreation
 
