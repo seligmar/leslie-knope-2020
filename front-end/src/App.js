@@ -17,10 +17,25 @@ import withReactContent from 'sweetalert2-react-content'
 // const MySwal = withReactContent(Swal)
 
 class App extends React.Component {
+  state = {
+    loggedIn: false,
+    username: '',
+    showLogIn: false
+  }
+
+  userState = user => {
+    this.setState({ username: user.username })
+    localStorage.setItem('token', user.token)
+  }
+
   render () {
     return (
       <div className='App'>
-        <TopMenu />
+        <TopMenu
+          userState={this.userState}
+          loggedIn={this.state.loggedIn}
+          showLogIn={this.state.showLogIn}
+        />
         <Route
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
