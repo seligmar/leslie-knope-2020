@@ -48,9 +48,26 @@ yellow: #ffea00;
   margin: 0%;
 }
 
+.login-form-border {
+  border-color: #1eb25c;
+  border-style: solid;
+  border-width: 10px;
+  /* margin-left: 10%;
+  margin-right: 10%;*/
+}
+
+.login {
+  text-align: center;
+  height: middle;
+  position: right;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #fff;
+}
+
 .button-login {
   cursor: pointer;
-  color:  black;
+  color: black;
   padding-left: 3%;
   padding-right: 3%;
   text-align: center;
@@ -61,18 +78,16 @@ yellow: #ffea00;
   /* background-image: url('./images/MenuBar.jpg'); */
   border-color: #ffea00;
   border-width: 1px;
-  font-size: 16px
+  font-size: 16px;
 }
 
 .top-menu {
-  background-color: #ffea00; 
+  background-color: #ffea00;
   margin-left: auto;
   margin-right: auto;
   color: 'black';
   width: 100%;
 }
-
-
 
 .youtube-block-grid {
   padding-top: 3%;
@@ -81,7 +96,7 @@ yellow: #ffea00;
 .youtube {
   margin-left: 10%;
   margin-right: 10%;
-  background-color:  #1eb25c; 
+  background-color: #1eb25c;
   padding: 1%;
   margin-top: 3%;
 }
@@ -90,11 +105,10 @@ yellow: #ffea00;
   padding-top: 3%;
   margin-left: 10%;
   margin-right: 10%;
- 
 }
 
-.twitter-box{
-  background-color: #fff; 
+.twitter-box {
+  background-color: #fff;
   padding: 1%;
   border-color: #1eb25c;
   border-style: solid;

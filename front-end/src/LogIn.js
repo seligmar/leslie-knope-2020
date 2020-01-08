@@ -14,8 +14,18 @@ const LogIn = props => {
   }
 
   const formHeader = {
-    'margin-bottom': '4%',
+    'margin-bottom': '2%',
     'text-decoration': 'underline'
+  }
+
+  const bottomBorder = {
+    'margin-bottom': '2%',
+    'margin-top': '2%'
+  }
+
+  const formBorder = {
+    'margin-right': '5%',
+    'margin-left': '5%'
   }
 
   return (
@@ -23,6 +33,7 @@ const LogIn = props => {
       <div class='field'>
         <div className='login-form-border'>
           <form
+            style={formBorder}
             // onSubmit={e => props.logIn(e)}
             className='ui form'
           >
@@ -37,25 +48,25 @@ const LogIn = props => {
             <label>UserName: </label>
             <input type='text' name='username' placeholder='username' />
             <label>Password: </label>
-            <input
-              type='password'
-              name='password'
-              placeholder='password'
-            />{' '}
-            <div className='buttons-login'>
-              {' '}
-              <div className='two ui buttons'>
+            <input type='password' name='password' placeholder='password' />
+            <label>Email Address: </label>
+            <input type='email' name='email' placeholder='email address' />{' '}
+            <div style={bottomBorder}>
+              <div className='buttons-login'>
                 {' '}
-                <button className='ui button' style={buttons} type='submit'>
-                  Log In{' '}
-                </button>{' '}
-                <button
-                  className='ui button'
-                  style={buttons}
-                  // onClick={e => props.showNewUserBar(e)}
-                >
-                  Create A New Account
-                </button>
+                <div className='two ui buttons'>
+                  {' '}
+                  <button className='ui button' style={buttons} type='submit'>
+                    Log In{' '}
+                  </button>{' '}
+                  <button
+                    className='ui button'
+                    style={buttons}
+                    // onClick={e => props.showNewUserBar(e)}
+                  >
+                    Create A New Account
+                  </button>
+                </div>
               </div>
             </div>
           </form>
