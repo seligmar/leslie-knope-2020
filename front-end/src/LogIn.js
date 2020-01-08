@@ -37,11 +37,9 @@ const LogIn = props => {
             <label>UserName: </label>
             <input type='text' name='username' placeholder='username' />
             <label>Password: </label>
-            <input
-              type='password'
-              name='password'
-              placeholder='password'
-            />{' '}
+            <input type='password' name='password' placeholder='password' />
+            <label>Email Address: </label>
+            <input type='email' name='email' placeholder='email address' />{' '}
             <div className='buttons-login'>
               {' '}
               <div className='two ui buttons'>
