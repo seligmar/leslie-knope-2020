@@ -1,8 +1,7 @@
-import React from 'react'
 import { createStore, combineReducers } from 'redux'
-import LogIn from '../LogIn'
+import LogIn from '../components/logIn/LogIn'
 
-const LogIn = (state, action) => {}
+// const LogIn = (state, action) => {}
 
 const loggedIn = (state = false, action) => {
   switch (action.type) {
