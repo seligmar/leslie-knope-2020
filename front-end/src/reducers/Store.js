@@ -17,7 +17,6 @@ const loggedIn = (state = false, action) => {
 
 const rootReducer = combineReducers({
   logedIn: loggedIn
-  // todo: todosReducer
 })
 
 const store = createStore(rootReducer)
