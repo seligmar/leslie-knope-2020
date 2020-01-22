@@ -41,6 +41,7 @@ class Home extends React.Component {
               height='560'
               src='https://www.youtube.com/embed/Xcdhpn-DXTA'
               frameborder='0'
+              title='Get On Your Feet'
               allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
               allowfullscreen
             />

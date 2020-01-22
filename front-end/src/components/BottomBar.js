@@ -45,6 +45,7 @@ const BottomBar = () => {
             height='480'
             frameBorder='0'
             class='giphy-embed'
+            title='gif-fight'
             allowFullScreen
           />
           <p>
@@ -91,7 +92,7 @@ const BottomBar = () => {
         </div>
         <div className='footer'>
           <p>PAID FOR BY KNOPE FOR PRESIDENT.</p>
-          <p> © Copyright 2019. All rights reserved.</p>
+          <p> © Copyright 2020. All rights reserved.</p>
         </div>
       </div>
     </div>

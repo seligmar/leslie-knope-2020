@@ -64,6 +64,7 @@ const LilSebastian = () => {
             height='480'
             frameBorder='0'
             class='giphy-embed'
+            title='gif-1'
             allowFullScreen
           />
         </div>
@@ -75,6 +76,7 @@ const LilSebastian = () => {
             height='480'
             frameBorder='0'
             class='giphy-embed'
+            title='gif-2'
             allowFullScreen
           />
         </div>
@@ -86,6 +88,7 @@ const LilSebastian = () => {
             height='480'
             frameBorder='0'
             class='giphy-embed'
+            title='gif-3'
             allowFullScreen
           />
         </div>
@@ -97,6 +100,7 @@ const LilSebastian = () => {
             height='480'
             frameBorder='0'
             class='giphy-embed'
+            title='gif-4'
             allowFullScreen
           />
         </div>
