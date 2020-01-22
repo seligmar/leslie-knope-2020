@@ -25,11 +25,11 @@ What things you need to install the software and how to install them
 
 To launch the app, you will need to run both
 
-```bundle install```
+`bundle install`
 
 and
 
-```npm start```
+`npm start`
 
 This project uses bcrypt with a username and one-way hashed encryption using bcrypt
 
@@ -37,7 +37,7 @@ You may need to manually activate gem 'rack-cors' gem 'bcrypt', '~> 3.1.7' and t
 
 To launch the APIs called as currently written will require that you run:
 
-```rails s -p 3001```
+`rails s -p 3001`
 
 You will also need to request both ProPublica and Google API keys.
 
@@ -77,33 +77,18 @@ Add additional notes about how to deploy this on a live system
 
 # Built With
 
-Dropwizard - The web framework used
-Maven - Dependency Management
-ROME - Used to generate RSS Feeds
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
-
 https://github.com/sweetalert2/sweetalert2-react-content - alerts
 
 https://github.com/CookPete/react-player - react player github
 
 https://react.semantic-ui.com/ styling suplimented with semantic ui, specifically the css package
 
-
 https://www.npmjs.com/package/react-twitter-embed - embeded tweets
-
-# Versioning
-
-We use SemVer for versioning. For the versions available, see the tags on this repository.
 
 # Authors
 
-Billie Thompson - Initial work - PurpleBooth
-See also the list of contributors who participated in this project.
-
-# License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details
+Mary Selig -
+See also the list of acknowlegments for those who made this project possible.
 
 # Acknowledgments
 
