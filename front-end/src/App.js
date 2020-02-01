@@ -7,12 +7,12 @@ import SexEd from './components/issues/SexEd'
 import LilSebastian from './components/issues/LilSebastian'
 import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
-import TopMenu from './TopMenu'
-import BottomBar from './components/BottomBar'
+import TopMenu from './components/navBars/TopMenu'
+import BottomBar from './components/navBars/BottomBar'
 import Home2 from './Home2'
 import About from './About'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+// import Swal from 'sweetalert2'
+// import withReactContent from 'sweetalert2-react-content'
 
 // const MySwal = withReactContent(Swal)
 

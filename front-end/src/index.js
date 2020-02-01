@@ -2,9 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import ScrollToTop from './components/ScrollToTop'
+import ScrollToTop from './components/navBars/ScrollToTop'
 import { BrowserRouter } from 'react-router-dom'
-import { createStore } from 'redux'
+// import { createStore } from 'redux'
 
 ReactDOM.render(
   <BrowserRouter>
