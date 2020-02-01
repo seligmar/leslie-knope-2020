@@ -15,6 +15,11 @@ gem 'rack-cors'
 gem 'bcrypt', '~> 3.1.7'
 and then run bundle install again.
 
+You will also need to enable cors here:
+leslie-knope-2020/back-end/config/initializers/cors.rb;
+
+# When a decision is made about access eg creating a seperate type of administrative user, that file will have to be changed!
+
 rails s -p 3001 (or whichever port)
 
 To prevent the need for 'prop drilling' and other challenges related to state, this app uses Redux; for an example of a similar project using regulr React please see an alternative framework I created here: https://github.com/seligmar/Campaign-2020
