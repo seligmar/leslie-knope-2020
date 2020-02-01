@@ -10,9 +10,9 @@ const MySwal = withReactContent(Swal)
 
 // /// would it make more sense to move this to the landing page?
 class UserIndex extends React.Component {
-  // state = {
-  //   newUser: false
-  // }
+  state = {
+    username: ''
+  }
 
   logIn = e => {
     e.preventDefault()
@@ -51,9 +51,7 @@ class UserIndex extends React.Component {
       if (data.error) {
         this.responseGif(data.error)
       } else {
-        // this.props.userState(data)
-        this.props.logIn()
-        // this.props.showLogIn()
+        this.setState({ username: data.username })
       }
     })
   }
@@ -91,19 +89,7 @@ class UserIndex extends React.Component {
   render () {
     return (
       <div>
-        {/* {this.props.loggedIn === false && this.state.newUser === false ? ( */}
-        <LogIn
-          logIn={this.logIn}
-          showNewUserBar={this.showNewUserBar}
-          HideLogIn={this.props.HideLogIn}
-        />
-        {/* ) : null} */}
-        {/* {this.state.newUser ? ( */}
-        {/* <NewSupport
-          LogInNewUser={this.logInNewUser}
-          HideLogIn={this.props.HideLogIn}
-        /> */}
-        {/* ) : null} */}
+        <LogIn logIn={this.logIn} />
       </div>
     )
   }

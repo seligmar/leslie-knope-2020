@@ -44,7 +44,7 @@ To launch the APIs called as currently written will require that you run:
 
 `rails s -p 3001`
 
-You will also need to request both ProPublica and Google API keys.
+You will also need to request a Google API key to include a Google Map.
 
 To include the Google Map functionality, you will need to aquire a Google API key and create a file to gitnore. Informaiton about how to do so is available here:
 
@@ -82,6 +82,8 @@ Add additional notes about how to deploy this on a live system
 
 # Built With
 
+https://guides.rubyonrails.org/ - Ruby on Rails
+
 https://github.com/sweetalert2/sweetalert2-react-content - alerts
 
 https://github.com/CookPete/react-player - react player github
@@ -92,8 +94,7 @@ https://www.npmjs.com/package/react-twitter-embed - embeded tweets
 
 # Authors
 
-Mary Selig -
-See also the list of acknowlegments for those who made this project possible.
+Mary Selig
 
 # Acknowledgments
 
