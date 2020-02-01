@@ -1,6 +1,7 @@
 import React from 'react'
 
 const LogIn = props => {
+  debugger
   const xButton = {
     position: 'relative',
     left: '48.5%',
@@ -34,7 +35,7 @@ const LogIn = props => {
         <div className='login-form-border'>
           <form
             style={formBorder}
-            // onSubmit={e => props.logIn(e)}
+            onSubmit={e => props.logIn(e)}
             className='ui form'
           >
             {/* {' '} */}

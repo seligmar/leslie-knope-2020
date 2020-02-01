@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Home2.css'
-import ReactPlayer from 'react-player'
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
 
 class Home2 extends React.Component {

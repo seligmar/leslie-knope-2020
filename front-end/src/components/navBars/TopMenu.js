@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import LogIn from './LogIn'
+import LogIn from '../logIn/LogIn'
 import UserIndex from './UserIndex'
 
 const TopMenu = props => {

@@ -32,9 +32,9 @@ class App extends React.Component {
     return (
       <div className='App'>
         <TopMenu
-          userState={this.userState}
-          loggedIn={this.state.loggedIn}
-          showLogIn={this.state.showLogIn}
+        // userState={this.userState}
+        // loggedIn={this.state.loggedIn}
+        // showLogIn={this.state.showLogIn}
         />
         <Route
           path='/donate/leslieknope2020'

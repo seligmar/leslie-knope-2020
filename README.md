@@ -15,6 +15,11 @@ gem 'rack-cors'
 gem 'bcrypt', '~> 3.1.7'
 and then run bundle install again.
 
+You will also need to enable cors here:
+leslie-knope-2020/back-end/config/initializers/cors.rb;
+
+# When a decision is made about access eg creating a seperate type of administrative user, that file will have to be changed!
+
 rails s -p 3001 (or whichever port)
 
 To prevent the need for 'prop drilling' and other challenges related to state, this app uses Redux; for an example of a similar project using regulr React please see an alternative framework I created here: https://github.com/seligmar/Campaign-2020
@@ -39,7 +44,7 @@ To launch the APIs called as currently written will require that you run:
 
 `rails s -p 3001`
 
-You will also need to request both ProPublica and Google API keys.
+You will also need to request a Google API key to include a Google Map.
 
 To include the Google Map functionality, you will need to aquire a Google API key and create a file to gitnore. Informaiton about how to do so is available here:
 
@@ -77,6 +82,8 @@ Add additional notes about how to deploy this on a live system
 
 # Built With
 
+https://guides.rubyonrails.org/ - Ruby on Rails
+
 https://github.com/sweetalert2/sweetalert2-react-content - alerts
 
 https://github.com/CookPete/react-player - react player github
@@ -87,8 +94,7 @@ https://www.npmjs.com/package/react-twitter-embed - embeded tweets
 
 # Authors
 
-Mary Selig -
-See also the list of acknowlegments for those who made this project possible.
+Mary Selig
 
 # Acknowledgments
 

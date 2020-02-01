@@ -1,11 +1,11 @@
-import React from 'react'
-import APIKey from './APIKey'
+// import React from 'react'
+// import APIKey from './APIKey'
 
-const base_url = 'http://localhost:3001/'
+const base_url = 'http://localhost:3001'
 const signin_url = base_url + '/signin'
 
 const post = (url, data) => {
-  return fetch(url, {
+  fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json'
@@ -14,10 +14,10 @@ const post = (url, data) => {
   }).then(resp => resp.json())
 }
 
-const signin = ({ username, password }) =>
+const login = ({ username, password }) =>
   post(signin_url, { username, password })
 
-export default { signin }
+export default { login }
 
 // 6. Be sure to replace every instance of the API keys with these new variables.
 // E.g. if you had:
