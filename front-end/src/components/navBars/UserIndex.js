@@ -1,7 +1,7 @@
 import React from 'react'
 import LogIn from '../logIn/LogIn'
 // import NewSupport from './NewSupporter'
-// import { login } from '../logIn/API'
+import API from '../logIn/API'
 
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
@@ -47,7 +47,7 @@ class UserIndex extends React.Component {
   //   }
 
   LogInUser = user => {
-    login(user).then(data => {
+    API.login(user).then(data => {
       if (data.error) {
         this.responseGif(data.error)
       } else {
