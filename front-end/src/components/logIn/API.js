@@ -14,10 +14,10 @@ const post = (url, data) => {
   }).then(resp => resp.json())
 }
 
-const login = ({ username, password }) =>
+const signIn = ({ username, password }) =>
   post(signin_url, { username, password })
 
-export default { login }
+export default { signIn }
 
 // 6. Be sure to replace every instance of the API keys with these new variables.
 // E.g. if you had:

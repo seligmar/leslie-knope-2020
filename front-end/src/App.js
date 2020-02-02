@@ -9,12 +9,13 @@ import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
 import TopMenu from './components/navBars/TopMenu'
 import BottomBar from './components/navBars/BottomBar'
+import API from './components/logIn/API'
 import Home2 from './Home2'
 import About from './About'
-// import Swal from 'sweetalert2'
-// import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
-// const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal)
 
 class App extends React.Component {
   state = {
@@ -28,13 +29,80 @@ class App extends React.Component {
     localStorage.setItem('token', user.token)
   }
 
+  logIn = e => {
+    e.preventDefault()
+    const user = {
+      username: e.target.username.value,
+      password: e.target.password.value
+    }
+    this.LogInUser(user)
+  }
+
+  LogInUser = user => {
+    API.signIn(user).then(data => {
+      if (data.error) {
+        this.responseGif(data.error)
+      } else {
+        this.setState({ username: data.username })
+      }
+    })
+  }
+
+  responseGif = response => {
+    MySwal.fire({
+      title: 'Please try again',
+      text: `${response}`,
+      confirmButtonColor: '#b61b28',
+      animation: false
+    })
+  }
+
+  //   logInNewUser = e => {
+  //     e.preventDefault()
+  //     if (
+  //       e.target.username.value === '' ||
+  //       e.target.password.value === '' ||
+  //       e.target.email.value === ''
+  //     ) {
+  //       MySwal.fire({
+  //         title: 'Please try again',
+  //         type: 'error',
+  //         confirmButtonColor: '#b61b28',
+  //         animation: false
+  //       })
+  //     } else {
+  //       const user = {
+  //         username: e.target.username.value,
+  //         password: e.target.password.value,
+  //         emailaddress: e.target.email.value
+  //       }
+  //       this.createNewUser(user)
+  //     }
+  //   }
+
+  //   // createNewUser = user => {
+  //   //   API.newUser(user)
+  //   //     .then(data => {
+  //   //       if (data.error) {
+  //   //         throw Error(data.error)
+  //   //       } else {
+  //   //         this.props.userState(data)
+  //   //         this.props.logIn()
+  //   //         this.props.showLogIn()
+  //   //       }
+  //   //     })
+  //   //     .catch(error => {
+  //   //       this.responseGif(error)
+  //   //     })
+  //   // }
+
   render () {
     return (
       <div className='App'>
         <TopMenu
-        // userState={this.userState}
-        // loggedIn={this.state.loggedIn}
-        // showLogIn={this.state.showLogIn}
+          // userState={this.userState}
+          logIn={this.logIn}
+          // showLogIn={this.state.showLogIn}
         />
         <Route
           path='/donate/leslieknope2020'

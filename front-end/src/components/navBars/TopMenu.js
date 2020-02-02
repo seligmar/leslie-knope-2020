@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import LogIn from '../logIn/LogIn'
-import UserIndex from './UserIndex'
+import NewSupporter from '../logIn/NewSupporter'
+
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
 
 const TopMenu = props => {
   const styles = {
@@ -40,7 +45,7 @@ const TopMenu = props => {
       <button id='login' className='button-login'>
         Log In
       </button>
-      <LogIn />
+      <LogIn logIn={props.logIn} />
       <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues
@@ -76,7 +81,7 @@ const TopMenu = props => {
       {/* <Link to='/my-reps/elizabethwarren2020'>
         <button className='button-login'>Find My Reps</button>
       </Link> */}
-      {props.showLogInState ? (
+      {/* {props.showLogInState ? (
         <UserIndex
           showLogIn={props.showLogIn}
           userState={props.userState}
@@ -87,7 +92,7 @@ const TopMenu = props => {
       ) : null}
       {props.loggedIn ? (
         <p>Welcome back, {props.username}! Thank you for your support!</p>
-      ) : null}
+      ) : null} */}
     </div>
   )
 }
