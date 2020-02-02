@@ -14,8 +14,7 @@ const post = (url, data) => {
   }).then(resp => resp.json())
 }
 
-const signIn = ({ username, password }) =>
-  post(signin_url, { username, password })
+const signIn = user => post(signin_url, user)
 
 export default { signIn }
 
