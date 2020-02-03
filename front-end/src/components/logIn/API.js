@@ -1,11 +1,10 @@
-// import React from 'react'
 // import APIKey from './APIKey'
 
 const base_url = 'http://localhost:3001'
 const signin_url = base_url + '/signin'
 
 const post = (url, data) => {
-  fetch(url, {
+  return fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json'

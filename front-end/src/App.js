@@ -19,9 +19,7 @@ const MySwal = withReactContent(Swal)
 
 class App extends React.Component {
   state = {
-    loggedIn: false,
-    username: '',
-    showLogIn: false
+    username: ''
   }
 
   userState = user => {
@@ -39,11 +37,11 @@ class App extends React.Component {
   }
 
   LogInUser = user => {
-    API.signIn(user).then(data => {
-      if (data.error) {
-        this.responseGif(data.error)
+    API.signIn(user).then(resp => {
+      if (resp.error) {
+        this.responseGif(resp.error)
       } else {
-        this.setState({ username: data.username })
+        this.userState(resp)
       }
     })
   }
@@ -99,11 +97,7 @@ class App extends React.Component {
   render () {
     return (
       <div className='App'>
-        <TopMenu
-          // userState={this.userState}
-          logIn={this.logIn}
-          // showLogIn={this.state.showLogIn}
-        />
+        <TopMenu logIn={this.logIn} />
         <Route
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}

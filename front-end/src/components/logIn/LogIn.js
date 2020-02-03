@@ -37,7 +37,6 @@ const LogIn = props => {
             onSubmit={e => props.logIn(e)}
             className='ui form'
           >
-            {/* {' '} */}
             <button
               style={xButton}
               // onClick={() => props.HideLogIn()}
@@ -59,11 +58,7 @@ const LogIn = props => {
                   <button className='ui button' style={buttons} type='submit'>
                     Log In{' '}
                   </button>{' '}
-                  <button
-                    className='ui button'
-                    style={buttons}
-                    // onClick={e => props.showNewUserBar(e)}
-                  >
+                  <button className='ui button' style={buttons} x>
                     Create A New Account
                   </button>
                 </div>
