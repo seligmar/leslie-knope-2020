@@ -35,6 +35,7 @@ class App extends React.Component {
       password: e.target.password.value
     }
     this.LogInUser(user)
+    e.target.reset()
   }
 
   LogInUser = user => {
@@ -84,6 +85,7 @@ class App extends React.Component {
         emailaddress: e.target.email.value
       }
       this.createNewUser(user)
+      e.target.reset()
     }
   }
 
@@ -91,6 +93,8 @@ class App extends React.Component {
     API.newUser(user)
       .then(data => {
         if (data.error) {
+          // to throw and Error in a .then statement allows the .catch(), which
+          // means all errors can be "caught" in the same place
           throw Error(data.error)
         } else {
           this.userState(data)

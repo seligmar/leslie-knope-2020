@@ -8,9 +8,9 @@ const NewSupporter = props => {
   }
 
   const buttons = {
-    'background-color': '#b61b28',
-    color: '#fff',
-    'border-color': '#232444'
+    'background-color': '#50b8e7',
+    color: 'black',
+    'border-color': '#50b8e7'
   }
 
   const formHeader = {
@@ -29,7 +29,7 @@ const NewSupporter = props => {
             >
               X
             </button>
-            <div style={formHeader}> Join the fight with Liz!</div>
+            <div style={formHeader}> Join the fight with Leslie!</div>
             <label>Please Enter Your Name: </label>
             <input type='text' name='username' placeholder='username' />
             <label>Create Your Password: </label>
