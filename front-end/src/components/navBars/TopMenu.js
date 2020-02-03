@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom'
 import LogIn from '../logIn/LogIn'
 import NewSupporter from '../logIn/NewSupporter'
 
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-
-const MySwal = withReactContent(Swal)
-
 const TopMenu = props => {
   const styles = {
     position: 'absolute',
@@ -40,7 +35,11 @@ const TopMenu = props => {
       </Link>
       <i class='align justify icon' style={styles} />
       {props.user ? (
-        <button id='logout' className='button-login'>
+        <button
+          onClick={() => props.signOut()}
+          id='logout'
+          className='button-login'
+        >
           Log Out
         </button>
       ) : (

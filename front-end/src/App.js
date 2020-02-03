@@ -105,6 +105,10 @@ class App extends React.Component {
       })
   }
 
+  signOut = () => {
+    this.setState({ username: '' })
+  }
+
   render () {
     return (
       <div className='App'>
@@ -112,6 +116,7 @@ class App extends React.Component {
           logIn={this.logIn}
           newUser={this.logInNewUser}
           user={this.state.username}
+          signOut={this.signOut}
         />
         <Route
           path='/donate/leslieknope2020'
