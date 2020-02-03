@@ -2,6 +2,7 @@
 
 const base_url = 'http://localhost:3001'
 const signin_url = base_url + '/signin'
+const newuser_url = base_url + '/new'
 
 const post = (url, data) => {
   return fetch(url, {
@@ -14,8 +15,9 @@ const post = (url, data) => {
 }
 
 const signIn = user => post(signin_url, user)
+const newUser = user => post(newuser_url, user)
 
-export default { signIn }
+export default { signIn, newUser }
 
 // 6. Be sure to replace every instance of the API keys with these new variables.
 // E.g. if you had:

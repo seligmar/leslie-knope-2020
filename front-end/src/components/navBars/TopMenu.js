@@ -46,6 +46,7 @@ const TopMenu = props => {
         Log In
       </button>
       <LogIn logIn={props.logIn} />
+      <NewSupporter newUser={props.newUser} />
       <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues

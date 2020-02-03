@@ -14,7 +14,14 @@ class UsersController < ApplicationController
   end 
 
   def new
+    user1 = params[:username]
+    user = User.find_by(username: user1)
+      if user 
+        render json: {error: 'username and password combination invalid'}, status: 401
+      else newUser = User.create(username: user1, password: params[:password])
+        render json: { username: newUser.username }
   end 
+end
 
   private 
 

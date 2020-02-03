@@ -22,10 +22,7 @@ const NewSupporter = props => {
     <div className='login'>
       <div class='field'>
         <div className='login-form-border'>
-          <form
-            // onSubmit={e => props.LogInNewUser(e)}
-            className='ui form'
-          >
+          <form onSubmit={e => props.newUser(e)} className='ui form'>
             <button
               style={xButton}
               // onClick={() => props.HideLogIn()}

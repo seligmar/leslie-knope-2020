@@ -58,55 +58,53 @@ class App extends React.Component {
 
   successGif = response => {
     MySwal.fire({
-      text: `Welcome back, ${response}!`,
+      text: `Welcome, ${response}!`,
       confirmButtonColor: '#50b8e7',
       type: 'success'
     })
   }
 
-  //   logInNewUser = e => {
-  //     e.preventDefault()
-  //     if (
-  //       e.target.username.value === '' ||
-  //       e.target.password.value === '' ||
-  //       e.target.email.value === ''
-  //     ) {
-  //       MySwal.fire({
-  //         title: 'Please try again',
-  //         type: 'error',
-  //         confirmButtonColor: '#b61b28',
-  //         animation: false
-  //       })
-  //     } else {
-  //       const user = {
-  //         username: e.target.username.value,
-  //         password: e.target.password.value,
-  //         emailaddress: e.target.email.value
-  //       }
-  //       this.createNewUser(user)
-  //     }
-  //   }
+  logInNewUser = e => {
+    e.preventDefault()
+    if (
+      e.target.username.value === '' ||
+      e.target.password.value === ''
+      // || e.target.email.value === ''
+    ) {
+      MySwal.fire({
+        title: 'Please try again',
+        type: 'error',
+        confirmButtonColor: '#b61b28',
+        animation: false
+      })
+    } else {
+      const user = {
+        username: e.target.username.value,
+        password: e.target.password.value,
+        emailaddress: e.target.email.value
+      }
+      this.createNewUser(user)
+    }
+  }
 
-  //   // createNewUser = user => {
-  //   //   API.newUser(user)
-  //   //     .then(data => {
-  //   //       if (data.error) {
-  //   //         throw Error(data.error)
-  //   //       } else {
-  //   //         this.props.userState(data)
-  //   //         this.props.logIn()
-  //   //         this.props.showLogIn()
-  //   //       }
-  //   //     })
-  //   //     .catch(error => {
-  //   //       this.responseGif(error)
-  //   //     })
-  //   // }
+  createNewUser = user => {
+    API.newUser(user)
+      .then(data => {
+        if (data.error) {
+          throw Error(data.error)
+        } else {
+          this.userState(data)
+        }
+      })
+      .catch(error => {
+        this.responseGif(error)
+      })
+  }
 
   render () {
     return (
       <div className='App'>
-        <TopMenu logIn={this.logIn} />
+        <TopMenu logIn={this.logIn} newUser={this.logInNewUser} />
         <Route
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
