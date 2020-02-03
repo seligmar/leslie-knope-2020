@@ -39,12 +39,15 @@ const TopMenu = props => {
         <button className='button-login'>Home</button>
       </Link>
       <i class='align justify icon' style={styles} />
-      <button id='logout' className='button-login'>
-        Log Out
-      </button>
-      <button id='login' className='button-login'>
-        Log In
-      </button>
+      {props.user ? (
+        <button id='logout' className='button-login'>
+          Log Out
+        </button>
+      ) : (
+        <button id='login' className='button-login'>
+          Log In
+        </button>
+      )}
       <LogIn logIn={props.logIn} />
       <NewSupporter newUser={props.newUser} />
       <div style={dropdown} class='ui compact menu'>

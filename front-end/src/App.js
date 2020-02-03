@@ -108,7 +108,11 @@ class App extends React.Component {
   render () {
     return (
       <div className='App'>
-        <TopMenu logIn={this.logIn} newUser={this.logInNewUser} />
+        <TopMenu
+          logIn={this.logIn}
+          newUser={this.logInNewUser}
+          user={this.state.username}
+        />
         <Route
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
