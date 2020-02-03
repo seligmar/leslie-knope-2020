@@ -24,6 +24,7 @@ class App extends React.Component {
 
   userState = user => {
     this.setState({ username: user.username })
+    this.successGif(user.username)
     localStorage.setItem('token', user.token)
   }
 
@@ -52,6 +53,14 @@ class App extends React.Component {
       text: `${response}`,
       confirmButtonColor: '#b61b28',
       animation: false
+    })
+  }
+
+  successGif = response => {
+    MySwal.fire({
+      text: `Welcome back, ${response}!`,
+      confirmButtonColor: '#50b8e7',
+      type: 'success'
     })
   }
 

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const NewSupporter = props => {
-  debugger
   const xButton = {
     position: 'relative',
     left: '48.5%',

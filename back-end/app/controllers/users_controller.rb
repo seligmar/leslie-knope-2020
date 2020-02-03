@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
 
   def signin
-    user = User.find_by(username: params[:username])
+    user1 = params[:username]
+    user = User.find_by(username: user1)
     if user && user.authenticate(params[:password]) 
       # || user = get_current_user 
       render json: { username: user.username }
