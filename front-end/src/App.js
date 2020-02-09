@@ -24,9 +24,8 @@ class App extends React.Component {
 
   userState = user => {
     this.setState({ username: user.username })
-    this.successGif(user.username)
     // the local storage is part of the browser, the token is provided by the server
-    localStorage.setItem('token', user.token)
+    localStorage.setItem('token', user.id)
   }
 
   logIn = e => {
@@ -45,6 +44,7 @@ class App extends React.Component {
         this.responseGif(resp.error)
       } else {
         this.userState(resp)
+        this.successGif(user.username)
       }
     })
   }
@@ -99,6 +99,7 @@ class App extends React.Component {
           throw Error(data.error)
         } else {
           this.userState(data)
+          this.successGif(data.username)
         }
       })
       .catch(error => {
@@ -113,17 +114,13 @@ class App extends React.Component {
   }
 
   componentDidMount () {
-    if (localStorage.getItem('token') !== undefined) {
+    if (localStorage.getItem('token') !== null) {
       API.validate().then(data => {
         if (data.error) {
-        } else
-          API.signIn(data).then(data => {
-            if (data.error) {
-              this.responseGif(data.error)
-            } else {
-              this.userState(data)
-            }
-          })
+          this.responseGif(data.error)
+        } else {
+          this.userState(data)
+        }
       })
     }
   }

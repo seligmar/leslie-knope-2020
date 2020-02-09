@@ -10,7 +10,7 @@ const post = (url, data) => {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      Application: localStorage.getItem('token')
+      Authorization: localStorage.getItem('token')
     },
     body: JSON.stringify(data)
   }).then(resp => resp.json())
@@ -20,7 +20,7 @@ const get = url => {
   return fetch(url, {
     method: 'GET',
     headers: {
-      Application: localStorage.getItem('token')
+      Authorization: localStorage.getItem('token')
     }
   }).then(resp => resp.json())
 }
