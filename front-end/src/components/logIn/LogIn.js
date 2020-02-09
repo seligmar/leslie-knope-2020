@@ -8,29 +8,29 @@ const LogIn = props => {
   }
 
   const buttons = {
-    'background-color': '#50b8e7',
+    backgroundColor: '#50b8e7',
     color: 'black',
-    'border-color': '#232444'
+    borderColor: '#232444'
   }
 
   const formHeader = {
-    'margin-bottom': '2%',
-    'text-decoration': 'underline'
+    marginBottom: '2%',
+    textDecoration: 'underline'
   }
 
   const bottomBorder = {
-    'margin-bottom': '2%',
-    'margin-top': '2%'
+    marginBottom: '2%',
+    marginTop: '2%'
   }
 
   const formBorder = {
-    'margin-right': '5%',
-    'margin-left': '5%'
+    marginRight: '5%',
+    marginLeft: '5%'
   }
 
   return (
     <div className='login'>
-      <div class='field'>
+      <div className='field'>
         <div className='login-form-border'>
           <form
             style={formBorder}
@@ -58,7 +58,7 @@ const LogIn = props => {
                   <button className='ui button' style={buttons} type='submit'>
                     Log In{' '}
                   </button>{' '}
-                  <button className='ui button' style={buttons} x>
+                  <button className='ui button' style={buttons}>
                     Create A New Account
                   </button>
                 </div>

@@ -17,7 +17,7 @@ class Home extends React.Component {
             className='react-player'
             url='https://media.giphy.com/media/xRfxdozZr2zYI/giphy.mp4'
             playing='true'
-            loop='true'
+            loop={'true'}
             width='100%'
             height='70%'
           />
@@ -40,10 +40,10 @@ class Home extends React.Component {
               width='100%'
               height='560'
               src='https://www.youtube.com/embed/Xcdhpn-DXTA'
-              frameborder='0'
+              frameBorder='0'
               title='Get On Your Feet'
               allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
-              allowfullscreen
+              allowFullScreen
             />
           </div>
         </div>

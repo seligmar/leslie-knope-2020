@@ -11,21 +11,21 @@ const TopMenu = props => {
   }
 
   const dropdown = {
-    'background-color': '#ffea00',
+    backgroundColor: '#ffea00',
     color: 'black',
-    'font-size': '1.2rem',
-    'border-color': '#ffea00',
-    'padding-left': '4%',
-    'padding-right': '4%'
+    fontSize: '1.2rem',
+    borderColor: '#ffea00',
+    paddingLeft: '4%',
+    paddingRight: '4%'
   }
   const dropdown1 = {
-    'background-color': '#ffea00',
+    backgroundColor: '#ffea00',
     color: 'black',
-    'text-align': 'left',
-    'box-shadow': 'none',
-    'border-color': '#ffea00',
-    'padding-left': '4%',
-    'padding-right': '4%'
+    textAlign: 'left',
+    boxShadow: 'none',
+    borderColor: '#ffea00',
+    paddingLeft: '4%',
+    paddingRight: '4%'
   }
 
   return (
@@ -33,7 +33,7 @@ const TopMenu = props => {
       <Link to='/leslieknope2020'>
         <button className='button-login'>Home</button>
       </Link>
-      <i class='align justify icon' style={styles} />
+      <i className='align justify icon' style={styles} />
       {props.user ? (
         <button
           onClick={() => props.signOut()}
@@ -52,9 +52,9 @@ const TopMenu = props => {
       <div style={dropdown} class='ui compact menu'>
         <div style={dropdown} class='ui simple dropdown item'>
           Issues
-          <i class='dropdown icon' />
+          <i className='dropdown icon' />
           <div style={dropdown1} class='menu'>
-            <div class='item'>
+            <div className='item'>
               <Link to='/sex-ed/leslieknope2020'>
                 <div className='button-dropdown'>Sex Ed</div>
               </Link>
