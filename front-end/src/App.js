@@ -25,6 +25,7 @@ class App extends React.Component {
   userState = user => {
     this.setState({ username: user.username })
     this.successGif(user.username)
+    // the local storage is part of the browser, the token is provided by the server
     localStorage.setItem('token', user.token)
   }
 
@@ -107,6 +108,24 @@ class App extends React.Component {
 
   signOut = () => {
     this.setState({ username: '' })
+    // remove only single token as a lot of different info is stored locally
+    localStorage.removeItem('token')
+  }
+
+  componentDidMount () {
+    if (localStorage.getItem('token') !== undefined) {
+      API.validate().then(data => {
+        if (data.error) {
+        } else
+          API.signIn(data).then(data => {
+            if (data.error) {
+              this.responseGif(data.error)
+            } else {
+              this.userState(data)
+            }
+          })
+      })
+    }
   }
 
   render () {
