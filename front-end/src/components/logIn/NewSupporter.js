@@ -1,4 +1,5 @@
 import React from 'react'
+//https:semantic-ui.com/behaviors/form.html
 
 const NewSupporter = props => {
   const xButton = {
@@ -8,19 +9,19 @@ const NewSupporter = props => {
   }
 
   const buttons = {
-    'background-color': '#50b8e7',
+    backgroundColor: '#50b8e7',
     color: 'black',
-    'border-color': '#50b8e7'
+    borderColor: '#50b8e7'
   }
 
   const formHeader = {
-    'margin-bottom': '2%',
-    'text-decoration': 'underline'
+    marginBottom: '2%',
+    textDecoration: 'underline'
   }
 
   return (
     <div className='login'>
-      <div class='field'>
+      <div className='field'>
         <div className='login-form-border'>
           <form onSubmit={e => props.newUser(e)} className='ui form'>
             <button

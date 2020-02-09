@@ -8,8 +8,8 @@ const buttonStyle = {
   justifyContent: 'space-between',
   alignItems: 'center',
   margin: '0 10px',
-  'margin-top': '4%',
-  'margin-bottom': '4%'
+  marginTop: '4%',
+  marginBottom: '4%'
 }
 
 const BottomBar = () => {

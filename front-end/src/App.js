@@ -24,8 +24,8 @@ class App extends React.Component {
 
   userState = user => {
     this.setState({ username: user.username })
-    this.successGif(user.username)
-    localStorage.setItem('token', user.token)
+    // the local storage is part of the browser, the token is provided by the server
+    localStorage.setItem('token', user.id)
   }
 
   logIn = e => {
@@ -44,6 +44,7 @@ class App extends React.Component {
         this.responseGif(resp.error)
       } else {
         this.userState(resp)
+        this.successGif(user.username)
       }
     })
   }
@@ -98,6 +99,7 @@ class App extends React.Component {
           throw Error(data.error)
         } else {
           this.userState(data)
+          this.successGif(data.username)
         }
       })
       .catch(error => {
@@ -105,10 +107,33 @@ class App extends React.Component {
       })
   }
 
+  signOut = () => {
+    this.setState({ username: '' })
+    // remove only single token as a lot of different info is stored locally
+    localStorage.removeItem('token')
+  }
+
+  componentDidMount () {
+    if (localStorage.getItem('token') !== null) {
+      API.validate().then(data => {
+        if (data.error) {
+          this.responseGif(data.error)
+        } else {
+          this.userState(data)
+        }
+      })
+    }
+  }
+
   render () {
     return (
       <div className='App'>
-        <TopMenu logIn={this.logIn} newUser={this.logInNewUser} />
+        <TopMenu
+          logIn={this.logIn}
+          newUser={this.logInNewUser}
+          user={this.state.username}
+          signOut={this.signOut}
+        />
         <Route
           path='/donate/leslieknope2020'
           component={routerProps => <Donate {...routerProps} />}
