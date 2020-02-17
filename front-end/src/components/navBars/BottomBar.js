@@ -15,15 +15,15 @@ const buttonStyle = {
 const BottomBar = () => {
   return (
     <div className='Menu'>
-      <div className='menu-grid'>
+      <div className='menu-grid '>
         <div className='links'>
-          <Link to='/leslieknope2020' className='link'>
-            <div className='about-box'>
+          <Link to='/leslieknope2020' className='link' target='_blank'>
+            <div>
               <h1>Home</h1>
             </div>
           </Link>
-          <Link to='/donate/leslieknope2020' className='link'>
-            <div className='donation-box'>
+          <Link to='/donate/leslieknope2020' className='link' target='_blank'>
+            <div>
               <h1>Give Now</h1>
             </div>
           </Link>
