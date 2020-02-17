@@ -27,18 +27,19 @@ const BottomBar = () => {
               <h1>Give Now</h1>
             </div>
           </Link>
-          {/* <Link to='/getinvolved/elizabethwarren2020' className='link'>
+        </div>
+        {/* <Link to='/getinvolved/elizabethwarren2020' className='link'>
             <div className='get-involved-box'>
               <h1 className='involved-button'>Get Involved</h1>
             </div>
           </Link> */}
-          {/* <Link to='/about/elizabethwarren2020' className='link'>
+        {/* <Link to='/about/elizabethwarren2020' className='link'>
             <div className='about-box'>
               <h1>About</h1>
             </div>
           </Link> */}
-        </div>
-        <div className='menu-gif'>
+
+        {/* <div className='menu-gif'>
           <iframe
             src='https://giphy.com/embed/p0OJ2Pn79Qqu4'
             width='384'
@@ -53,7 +54,7 @@ const BottomBar = () => {
               via GIPHY
             </a>
           </p>
-        </div>
+        </div> */}
       </div>
       <div className='social-media-grid'>
         <div className='four ui icon buttons'>
