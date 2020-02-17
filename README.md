@@ -36,10 +36,6 @@ and
 
 `npm start`
 
-This project uses bcrypt with a username and one-way hashed encryption using bcrypt
-
-You may need to manually activate gem 'rack-cors' gem 'bcrypt', '~> 3.1.7' and then run bundle install again.
-
 To launch the APIs called as currently written will require that you run:
 
 `rails s -p 3001`
@@ -62,13 +58,6 @@ And repeat
 
 until finished
 End with an example of getting some data out of the system or using it for a little demo
-
-# Running the tests
-
-Explain how to run the automated tests for this system
-
-Break down into end to end tests
-Explain what these tests test and why
 
 # Give an example
 
@@ -107,3 +96,13 @@ https://www.youtube.com/watch?time_continue=172&v=Pf7g32CwX_s - Leigh Halliday
 https://www.youtube.com/watch?v=pRiQeo17u6c - Traversy Media
 
 "Parks and Recreation" is a production of Deedle-Dee Productions, Fremulon, 3 Arts Entertainment and Universal Television. Along with Daniels and Schur, Howard Klein ("The Office") and David Miner ("30 Rock"), Daniel J. Goor (Late Night with Conan O'Brien") and Morgan Sackett ("Seinfeld") also serve as executive producers for the series. https://www.nbc.com/parks-and-recreation
+
+# notes:
+
+I wrote a series of medium posts about the authorization/authentication used in this app:
+
+https://medium.com/@seligmar/authentication-authorization-eb14cd6f94da
+
+https://medium.com/@seligmar/authentication-authorization-2-2f62d8dce2ad
+
+https://medium.com/@seligmar/authentication-authorization-3-a6d30488cf47
