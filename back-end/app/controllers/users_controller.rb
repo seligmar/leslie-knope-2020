@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def new 
     user = User.new(username: params[:username], password: params[:password])
     if user.save
-        render json: { username: user.username, id: user.id}, status: :create
+        render json: { username: user.username, token: issue_token({id: user.id})} , status: :create
     else 
       if (user.errors.full_messages[0] === 'Username has already been taken')
         render json: {error: 'username and password combination invalid'}
@@ -24,10 +24,11 @@ class UsersController < ApplicationController
   end 
 
 def validate 
-  id = request.headers["Authorization"].to_i
-  user = User.find_by(id: id)
+  user = get_current_user
+  # id = request.headers["Authorization"].to_i
+  # user = User.find_by(id: id)
     if user 
-        render json: { username: user.username, id: user.id}  
+        render json: { username: user.username, token: issue_token({id: user.id}) }  
     else render json: {error: 'Invalid token'}, status: 404
   end 
 end 
