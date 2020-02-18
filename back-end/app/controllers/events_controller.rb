@@ -5,7 +5,7 @@ class EventsController < ApplicationController
     Event.all.map do |event|
       eachEvent = {
       id: event.id, 
-      day_time: event.datetime, 
+      datetime: event.datetime, 
       street_address: event.street_address,
       city: event.city,
       state: event.state,
@@ -15,13 +15,9 @@ class EventsController < ApplicationController
       lat: event.lat}
       events << eachEvent
     end 
-    # upcoming = events.select do |event| 
-    #   event[:year] > Date.today.year ||  
-    #   (event[:month] >= Date.today.month && 
-    #   event[:day] >= Date.today.day) 
-
-    render json: events 
-  end 
+    newlist = events.sort_by {|obj| obj[:datetime] } 
+    render json: newlist 
+end
 
   def create 
   end 

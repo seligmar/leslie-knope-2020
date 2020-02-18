@@ -95,6 +95,9 @@ https://www.youtube.com/watch?time_continue=172&v=Pf7g32CwX_s - Leigh Halliday
 
 https://www.youtube.com/watch?v=pRiQeo17u6c - Traversy Media
 
+Thanks too to the StackOverflow Q&A that finally explained why my datetime sorting was reverting all my dates to 01-01-2000
+https://stackoverflow.com/questions/12832857/date-reverts-to-2000-01-01-from-activerecord-to-mysql
+
 "Parks and Recreation" is a production of Deedle-Dee Productions, Fremulon, 3 Arts Entertainment and Universal Television. Along with Daniels and Schur, Howard Klein ("The Office") and David Miner ("30 Rock"), Daniel J. Goor (Late Night with Conan O'Brien") and Morgan Sackett ("Seinfeld") also serve as executive producers for the series. https://www.nbc.com/parks-and-recreation
 
 # notes:
