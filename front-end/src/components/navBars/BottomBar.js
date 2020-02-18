@@ -16,11 +16,14 @@ const BottomBar = () => {
   return (
     <div className='Menu'>
       <div className='links'>
-        <Link to='/leslieknope2020' className='link' target='_blank'>
+        <Link to='/leslieknope2020' className='link'>
           <h1>Home</h1>
         </Link>
-        <Link to='/donate/leslieknope2020' className='link' target='_blank'>
+        <Link to='/donate/leslieknope2020' className='link'>
           <h1>Give Now</h1>
+        </Link>
+        <Link to='/events/leslieknope2020' className='link'>
+          <h1>Events</h1>
         </Link>
 
         {/* <Link to='/getinvolved/elizabethwarren2020' className='link'>
