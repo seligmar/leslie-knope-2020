@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_02_18_174143) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
-    t.time "datetime"
+    t.datetime "datetime"
     t.string "street_address"
     t.string "city"
     t.string "state"

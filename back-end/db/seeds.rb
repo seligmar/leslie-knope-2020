@@ -8,8 +8,9 @@
 
 User.create(username: 'Mary', password: 'password')
 
-Event.create(datetime: 
-  '2020-04-18 18:00:00',
+events = [{
+  datetime: 
+  "2020-04-18 18:00:000Z",
 street_address: '421 W 27th St NW', 
 city: 'Winston-Salem', 
 state: 'NC', 
@@ -17,4 +18,29 @@ zip: '27105',
 lat: 36.124180, 
 lng: -80.253630, 
 title: 'KNOPE FOR PRESIDENT'
-)
+}, 
+
+{datetime: 
+"2020-05-20 07:00:000Z",
+street_address: '11 Meserole St', 
+city: 'Brooklyn', 
+state: 'NY', 
+zip: '11206', 
+lat: 40.707661, 
+lng: -73.949928, 
+title: 'NORTH BROOKLYN FOR KNOPE PHONE BANK'
+} , 
+
+{datetime: 
+"2020-02-20 07:00:000Z",
+street_address: '11 Meserole St', 
+city: 'Brooklyn', 
+state: 'NY', 
+zip: '11206', 
+lat: 40.707661, 
+lng: -73.949928, 
+title: 'NORTH BROOKLYN FOR KNOPE PHONE BANK'
+} 
+]
+
+Event.create events 
