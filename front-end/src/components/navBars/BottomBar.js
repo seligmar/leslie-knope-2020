@@ -15,19 +15,14 @@ const buttonStyle = {
 const BottomBar = () => {
   return (
     <div className='Menu'>
-      <div className='menu-grid '>
-        <div className='links'>
-          <Link to='/leslieknope2020' className='link' target='_blank'>
-            <div>
-              <h1>Home</h1>
-            </div>
-          </Link>
-          <Link to='/donate/leslieknope2020' className='link' target='_blank'>
-            <div>
-              <h1>Give Now</h1>
-            </div>
-          </Link>
-        </div>
+      <div className='links'>
+        <Link to='/leslieknope2020' className='link' target='_blank'>
+          <h1>Home</h1>
+        </Link>
+        <Link to='/donate/leslieknope2020' className='link' target='_blank'>
+          <h1>Give Now</h1>
+        </Link>
+
         {/* <Link to='/getinvolved/elizabethwarren2020' className='link'>
             <div className='get-involved-box'>
               <h1 className='involved-button'>Get Involved</h1>
@@ -42,7 +37,7 @@ const BottomBar = () => {
         {/* <div className='menu-gif'>
           <iframe
             src='https://giphy.com/embed/p0OJ2Pn79Qqu4'
-            width='384'
+            width='384
             height='480'
             frameBorder='0'
             class='giphy-embed'

@@ -7,6 +7,7 @@ import SexEd from './components/issues/SexEd'
 import LilSebastian from './components/issues/LilSebastian'
 import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
+import Events from './components/events/Events'
 import TopMenu from './components/navBars/TopMenu'
 import BottomBar from './components/navBars/BottomBar'
 import API from './components/logIn/API'
@@ -139,6 +140,10 @@ class App extends React.Component {
           component={routerProps => <Donate {...routerProps} />}
         />
         <Switch>
+          <Route
+            path='/events/leslieknope2020'
+            component={routerProps => <Events {...routerProps} />}
+          />
           <Route
             path='/leslieknope2020'
             component={routerProps => <Home {...routerProps} />}
