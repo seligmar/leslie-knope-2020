@@ -14,3 +14,12 @@
   background-color: #fff;
   color: black;
 }
+
+.form-border {
+  border-color: #1eb25c;
+  border-style: solid;
+  border-width: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #ffea00;
+}
