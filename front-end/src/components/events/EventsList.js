@@ -18,17 +18,11 @@ const EventsList = props => {
                 />
                 <p>
                   <p> on </p>
-                  {event.datetime
-                    .split('')
-                    .splice(0, 10)
-                    .join('')}
+                  {event.month} {event.day}, {event.year}
                 </p>
                 <p>
                   <p> Starting At: </p>
-                  {event.datetime
-                    .split('')
-                    .splice(11)
-                    .join('')}
+                  {event.time} {event.timestamp}
                 </p>
                 {/*  - {event.start_time} on {event.day}/{event.month}/{event.year}</p> */}
                 <p class='description'>{event.street_address}</p>
