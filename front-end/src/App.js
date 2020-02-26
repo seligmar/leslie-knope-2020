@@ -142,7 +142,9 @@ class App extends React.Component {
         <Switch>
           <Route
             path='/events/leslieknope2020'
-            component={routerProps => <Events {...routerProps} />}
+            component={routerProps => (
+              <Events user={this.state.username} {...routerProps} />
+            )}
           />
           <Route
             path='/leslieknope2020'

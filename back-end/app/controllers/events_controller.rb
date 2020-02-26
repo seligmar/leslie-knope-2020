@@ -20,6 +20,10 @@ class EventsController < ApplicationController
 end
 
   def create 
+    # if (start[0] === '1' || start[0] === '2') {
+    #   let newNum = Number(start[0] + start[1]) - 12
+    #   start = '0' + newNum + ':' + start[3] + start[4]
+    # }
   end 
 
 end

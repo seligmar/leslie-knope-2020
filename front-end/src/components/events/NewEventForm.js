@@ -9,27 +9,37 @@ const MySwal = withReactContent(Swal)
 class NewEventForm extends React.Component {
   newEvent = e => {
     e.preventDefault()
-    if (!this.props.user) {
+    if (this.props.user.length === 0) {
       MySwal.fire({
         text: 'Please log in to create a new event',
         type: 'error',
         confirmButtonColor: '#b61b28'
       })
+      return
     } else {
-      const address = []
-      let newAddress = []
-      const line1 = e.target.addressLine1.value
-      const city = e.target.city.value
-      const state = e.target.state.value
-      const zip = e.target.zip.value
-      newAddress = address.concat(
+      let address = []
+      let line1 = e.target.addressLine1.value
+      let city = e.target.city.value
+      let state = e.target.state.value
+      let zip = e.target.zip.value
+      let newAddress = address.concat(
         line1.replace(/[^\w ]/, '').split(' '),
         city.replace(/[^\w ]/, '').split(' '),
         state.replace(/[^\w ]/, '').split(' '),
         zip.replace(/[^\w ]/, '').split(' ')
       )
-      const titleUpCase = e.target.title.value
-      const start = e.target.start.value
+      let title = e.target.title.value
+      let start = e.target.start.value
+      let day = e.target.date.value
+      let date = day.substring(8)
+      let year = day.slice(0, 4)
+      let month = day.slice(5, 7)
+      let compareDate = month + date + year
+      let today = new Date()
+      let dd = String(today.getDate()).padStart(2, '0')
+      let mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
+      let yyyy = today.getFullYear()
+      let todaySDATE = yyyy + mm + dd
       if (
         start.length !== 5 ||
         !start.includes(':', 2) ||
@@ -46,53 +56,18 @@ class NewEventForm extends React.Component {
         })
         return
       }
-      const end = e.target.end.value
       if (
-        end.length !== 5 ||
-        !end.includes(':', 2) ||
-        typeof parseInt(end[0]) !== 'number' ||
-        typeof parseInt(end[0]) >= 3 ||
-        typeof parseInt(end[1]) !== 'number' ||
-        typeof parseInt(end[3]) !== 'number' ||
-        typeof parseInt(end[4]) !== 'number'
+        month.length !== 2 ||
+        typeof parseInt(month[0]) !== 'number' ||
+        typeof parseInt(month[1]) !== 'number'
       ) {
         MySwal.fire({
-          title: 'Please format the end time 00:00',
+          title: 'Please format the month MM',
           confirmButtonColor: '#b61b28',
           animation: false
         })
         return
       }
-
-      // if (day.length !== 2
-      //   || typeof (parseInt(day[0])) !== 'number'
-      //   || typeof (parseInt(day[1])) !== 'number') {
-      //   MySwal.fire({
-      //     title: 'Please format the date DD',
-      //     confirmButtonColor: '#b61b28',
-      //     animation: false
-      //   })
-      //   return
-      // }
-      // if (month.length !== 2
-      //   || typeof (parseInt(month[0])) !== 'number'
-      //   || typeof (parseInt(month[1])) !== 'number') {
-      //   MySwal.fire({
-      //     title: 'Please format the month MM',
-      //     confirmButtonColor: '#b61b28',
-      //     animation: false
-      //   })
-      //   return
-      const day1 = e.target.date.value
-      const date = day1.substring(8)
-      const year = day1.slice(0, 4)
-      const month = day1.slice(5, 7)
-      const compareDate = month + date + year
-      const today = new Date()
-      const dd = String(today.getDate()).padStart(2, '0')
-      const mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
-      const yyyy = today.getFullYear()
-      const todaySDATE = yyyy + mm + dd
       if (year < yyyy || (month <= mm && date <= dd)) {
         MySwal.fire({
           title: 'Please enter a date after today',
@@ -114,12 +89,10 @@ class NewEventForm extends React.Component {
           confirmButtonColor: '#b61b28',
           animation: false
         })
-        return
       }
       const eventData = {
-        title: titleUpCase.toUpperCase(),
+        title: title.toUpperCase(),
         start_time: start,
-        end_time: end,
         street_address_1: line1,
         city: city,
         state: state,
@@ -128,63 +101,47 @@ class NewEventForm extends React.Component {
         month: month,
         year: year
       }
+      console.log(eventData)
       this.getLatLngFromAPI(eventData, newAddress.join('+'))
     }
   }
 
   getLatLngFromAPI = (event, address) => {
+    console.log(google_API_Key)
     return fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${google_API_Key}`
     )
       .then(resp => resp.json())
-      .then(data => this.parseAPI(event, data))
+      .then(resp => console.log(resp))
+    // .then(data => this.parseAPI(event, data))
   }
 
-  parseAPI = (event, data) => {
-    const lat = data['results']['0']['geometry']['location']['lat']
-    const lng = data['results']['0']['geometry']['location']['lng']
-    const coordinates = {
-      lat: lat,
-      lng: lng
-    }
-    this.mergeInfo(event, coordinates)
-  }
+  // parseAPI = (event, data) => {
+  //   const lat = data['results']['0']['geometry']['location']['lat']
+  //   const lng = data['results']['0']['geometry']['location']['lng']
+  //   const coordinates = {
+  //     lat: lat,
+  //     lng: lng
+  //   }
+  //   this.mergeInfo(event, coordinates)
+  // }
 
-  mergeInfo = (event, coordinates) => {
-    const newEvent = Object.assign(event, coordinates)
-    this.postEvent(newEvent)
-  }
+  // mergeInfo = (event, coordinates) => {
+  //   const newEvent = Object.assign(event, coordinates)
+  //   this.postEvent(newEvent)
+  // }
 
-  postEvent = event => {
-    API.newEvent(event).then(data => {
-      if (data.error) {
-        throw Error(data.error)
-      } else {
-        this.thanksGif()
-        this.props.hideForm()
-      }
-    })
-    // .catch(error => {
-    //   this.responseGif(error)
-    // })
-  }
-
-  responseGif = response => {
-    MySwal.fire({
-      title: 'Please try again',
-      text: `${response}`,
-      confirmButtonColor: '#b61b28',
-      animation: false
-    })
-  }
-
-  thanksGif = () => {
-    MySwal.fire({
-      text:
-        'Thank you for your support! Your contribution will help us strengthen our Democracy!',
-      type: 'success'
-    })
-  }
+  // postEvent = event => {
+  //   API.newEvent(event).then(data => {
+  //     if (data.error) {
+  //       throw Error(data.error)
+  //     } else {
+  //       this.thanksGif()
+  //       this.props.hideForm()
+  //     }
+  //   })
+  // .catch(error => {
+  //   this.responseGif(error)
 
   render () {
     const buttons = {
@@ -223,11 +180,9 @@ class NewEventForm extends React.Component {
               <input type='text' name='title' placeholder='Event Title' />
               <label>Start Time</label>
               <input type='text' name='start' placeholder='Start Time 00:00' />
-              <label>End Time</label>
-              <input type='text' name='end' placeholder='End Time 00:00' />{' '}
               <br></br> <br></br>
               <div class='field'>
-                <select>
+                <select class='field' name='ampm'>
                   <option value=''>Time</option>
                   <option value='1'>am</option>
                   <option value='0'>pm</option>

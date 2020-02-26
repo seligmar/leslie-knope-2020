@@ -76,7 +76,7 @@ class Events extends React.Component {
   render () {
     return (
       <div>
-        <NewEventForm />
+        <NewEventForm user={this.props.user} />
         {this.state.events.length > 0 ? (
           <EventsList events={this.state.events} />
         ) : null}
