@@ -188,8 +188,8 @@ class NewEventForm extends React.Component {
 
   render () {
     const buttons = {
-      'background-color': '#b61b28',
-      color: '#fff',
+      'background-color': '#50b8e7',
+      color: 'black',
       'margin-top': '3%',
       width: '80%'
     }
@@ -225,16 +225,15 @@ class NewEventForm extends React.Component {
               <input type='text' name='start' placeholder='Start Time 00:00' />
               <label>End Time</label>
               <input type='text' name='end' placeholder='End Time 00:00' />{' '}
-              <br></br>
-              <br></br>
+              <br></br> <br></br>
+              <div class='field'>
+                <select>
+                  <option value=''>Time</option>
+                  <option value='1'>am</option>
+                  <option value='0'>pm</option>
+                </select>
+              </div>
               <label>Event Date: </label>
-              <input
-                type='date'
-                name='date'
-                min='2019-10-24'
-                max='2020-11-03'
-              />
-              <label>am/pm</label>
               <input
                 type='date'
                 name='date'
