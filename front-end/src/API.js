@@ -1,5 +1,5 @@
 import React from 'react'
-import APIKey from './APIKey'
+import APIKey from './components/events/APIKey'
 
 const API = props => {
   return <div />

@@ -95,6 +95,8 @@ https://www.youtube.com/watch?time_continue=172&v=Pf7g32CwX_s - Leigh Halliday
 
 https://www.youtube.com/watch?v=pRiQeo17u6c - Traversy Media
 
+Thanks to this: https://github.com/facebook/create-react-app/issues/7183
+
 Thanks too to the StackOverflow Q&A that finally explained why my datetime sorting was reverting all my dates to 01-01-2000
 https://stackoverflow.com/questions/12832857/date-reverts-to-2000-01-01-from-activerecord-to-mysql
 

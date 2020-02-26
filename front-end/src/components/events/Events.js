@@ -1,6 +1,7 @@
 import React, { useDebugValue } from 'react'
 import EventsList from './EventsList'
 import API from '../logIn/API'
+import NewEventForm from './NewEventForm'
 
 const months = {
   '01': 'January',
@@ -68,9 +69,14 @@ class Events extends React.Component {
     this.setState({ events })
   }
 
+  // newEvent = () => {
+
+  // }
+
   render () {
     return (
       <div>
+        <NewEventForm />
         {this.state.events.length > 0 ? (
           <EventsList events={this.state.events} />
         ) : null}
