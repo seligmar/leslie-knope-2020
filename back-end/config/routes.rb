@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get "/validate", to: "users#validate"
 
   get '/events', to: "events#index"
-  post '/new-event', to: "events#create"
+  post '/create-event', to: "events#new"
 
 end
