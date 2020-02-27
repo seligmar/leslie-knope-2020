@@ -111,7 +111,6 @@ class NewEventForm extends React.Component {
       `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${key}`
     )
       .then(resp => resp.json())
-      .then(resp => console.log(resp))
       .then(data => this.parseAPI(event, data))
   }
 
