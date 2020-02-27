@@ -8,8 +8,8 @@ const MySwal = withReactContent(Swal)
 
 class NewEventForm extends React.Component {
   newEvent = e => {
-    console.log(e.target.ampm.value)
     e.preventDefault()
+    e.target.reset()
     if (this.props.user.length === 0) {
       MySwal.fire({
         text: 'Please log in to create a new event',
@@ -115,27 +115,8 @@ class NewEventForm extends React.Component {
         month: month,
         year: year
       }
-      this.reformatDate(eventData, newAddress.join('+'))
+      this.getLatLngFromAPI(eventData, newAddress.join('+'))
     }
-  }
-
-  reformatDate = (event, address) => {
-    let newDate =
-      event['year'] +
-      '-' +
-      event['month'] +
-      '-' +
-      event['day'] +
-      'TO' +
-      event['start_time'] +
-      ':00.000Z'
-    delete event['year']
-    delete event['month']
-    delete event['day']
-    delete event['start_time']
-    event.datetime = newDate
-    console.log(event)
-    this.getLatLngFromAPI(event, address)
   }
 
   getLatLngFromAPI = (event, address) => {
@@ -154,6 +135,39 @@ class NewEventForm extends React.Component {
       lat: lat,
       lng: lng
     }
+    this.reformatDate(event, coordinates)
+  }
+
+  // getTimeZone = (event, coordinates) => {
+  //   let lat = coordinates['lat']
+  //   let lng = coordinates['lng']
+  //   let key = google_API_Key['google_API_Key']
+  //   return fetch(
+  //     `https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${lng}&timestamp=1458000000&key=${key}`
+  //   )
+  //     .then(resp => resp.json())
+  //     .then(resp => this.reformatDate(event, coordinates, resp))
+  // }
+
+  reformatDate = (event, coordinates) => {
+    let newDate =
+      event['year'] +
+      '-' +
+      event['month'] +
+      '-' +
+      event['day'] +
+      ' ' +
+      event['start_time'] +
+      ':00'
+    //+
+    // 'UTC' +
+    // ''
+
+    delete event['year']
+    delete event['month']
+    delete event['day']
+    delete event['start_time']
+    event.datetime = newDate
     this.mergeInfo(event, coordinates)
   }
 
@@ -163,16 +177,15 @@ class NewEventForm extends React.Component {
   }
 
   postEvent = event => {
-    console.log(event)
     API.newEvent(event)
       .then(data => {
         if (data.error) {
           throw Error(data.error)
         } else {
           MySwal.fire({
-            text: 'Please log in to create a new event',
-            type: 'error',
-            confirmButtonColor: '#b61b28'
+            text: 'Thank you for joining the cause!',
+            // type: 'error',
+            confirmButtonColor: '#50b8e7'
           })
           // this.props.hideForm()
         }

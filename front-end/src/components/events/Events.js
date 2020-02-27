@@ -32,7 +32,6 @@ class Events extends React.Component {
   }
 
   reFormatDate = events => {
-    console.log(events[0])
     let newArr = events
       .map(event => event.datetime.split('-'))
       .map(event => months[event[1]])
