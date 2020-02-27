@@ -36,6 +36,7 @@ end
   private 
 
    def event_params 
+    byebug
      params.require(:event).permit(:title, :datetime, 
       :street_address_1, :city, :state, :zip, 
       lat, :lng)

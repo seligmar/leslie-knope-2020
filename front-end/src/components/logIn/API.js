@@ -31,7 +31,7 @@ const signIn = user => post(signin_url, user)
 const newUser = user => post(newuser_url, user)
 const validate = () => get(validate_url)
 const getEvents = () => get(get_events)
-const newEvent = () => post(new_event)
+const newEvent = data => post(new_event, data)
 
 export default { signIn, newUser, validate, getEvents, newEvent }
 
