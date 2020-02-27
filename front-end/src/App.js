@@ -24,6 +24,7 @@ class App extends React.Component {
   }
 
   userState = user => {
+    console.log(user)
     this.setState({ username: user.username })
     // the local storage is part of the browser, the token is provided by the server
     localStorage.setItem('token', user.token)

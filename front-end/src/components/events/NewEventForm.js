@@ -8,6 +8,7 @@ const MySwal = withReactContent(Swal)
 
 class NewEventForm extends React.Component {
   newEvent = e => {
+    console.log(e.target.ampm.value)
     e.preventDefault()
     if (this.props.user.length === 0) {
       MySwal.fire({
@@ -40,6 +41,19 @@ class NewEventForm extends React.Component {
       let mm = String(today.getMonth() + 1).padStart(2, '0') //January is 0!
       let yyyy = today.getFullYear()
       let todaySDATE = yyyy + mm + dd
+      let ampm = e.target.ampm.value
+      if (ampm === '0') {
+        let newNum = Number(start[0] + start[1]) + 12
+        start = newNum + ':' + start[3] + start[4]
+      }
+      if (ampm === '1' && Number(start[0] + start[1]) > 12) {
+        MySwal.fire({
+          title: 'Please format the start time 00:00',
+          confirmButtonColor: '#b61b28',
+          animation: false
+        })
+        return
+      }
       if (
         start.length !== 5 ||
         !start.includes(':', 2) ||
@@ -101,8 +115,27 @@ class NewEventForm extends React.Component {
         month: month,
         year: year
       }
-      this.getLatLngFromAPI(eventData, newAddress.join('+'))
+      this.reformatDate(eventData, newAddress.join('+'))
     }
+  }
+
+  reformatDate = (event, address) => {
+    let newDate =
+      event['year'] +
+      '-' +
+      event['month'] +
+      '-' +
+      event['day'] +
+      'TO' +
+      event['start_time'] +
+      ':00.000Z'
+    delete event['year']
+    delete event['month']
+    delete event['day']
+    delete event['start_time']
+    event.datetime = newDate
+    console.log(event)
+    this.getLatLngFromAPI(event, address)
   }
 
   getLatLngFromAPI = (event, address) => {
@@ -124,22 +157,34 @@ class NewEventForm extends React.Component {
     this.mergeInfo(event, coordinates)
   }
 
-  // mergeInfo = (event, coordinates) => {
-  //   const newEvent = Object.assign(event, coordinates)
-  //   this.postEvent(newEvent)
-  // }
+  mergeInfo = (event, coordinates) => {
+    const newEvent = Object.assign(event, coordinates)
+    this.postEvent(newEvent)
+  }
 
-  // postEvent = event => {
-  //   API.newEvent(event).then(data => {
-  //     if (data.error) {
-  //       throw Error(data.error)
-  //     } else {
-  //       this.thanksGif()
-  //       this.props.hideForm()
-  //     }
-  //   })
-  // .catch(error => {
-  //   this.responseGif(error)
+  postEvent = event => {
+    console.log(event)
+    API.newEvent(event)
+      .then(data => {
+        if (data.error) {
+          throw Error(data.error)
+        } else {
+          MySwal.fire({
+            text: 'Please log in to create a new event',
+            type: 'error',
+            confirmButtonColor: '#b61b28'
+          })
+          // this.props.hideForm()
+        }
+      })
+      .catch(error => {
+        MySwal.fire({
+          text: `${error}`,
+          type: 'error',
+          confirmButtonColor: '#b61b28'
+        })
+      })
+  }
 
   render () {
     const buttons = {

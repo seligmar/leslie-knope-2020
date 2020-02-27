@@ -5,6 +5,7 @@ const signin_url = base_url + '/signin'
 const newuser_url = base_url + '/new'
 const validate_url = base_url + '/validate'
 const get_events = base_url + '/events'
+const new_event = base_url + '/create-event'
 
 const post = (url, data) => {
   return fetch(url, {
@@ -30,8 +31,9 @@ const signIn = user => post(signin_url, user)
 const newUser = user => post(newuser_url, user)
 const validate = () => get(validate_url)
 const getEvents = () => get(get_events)
+const newEvent = () => post(new_event)
 
-export default { signIn, newUser, validate, getEvents }
+export default { signIn, newUser, validate, getEvents, newEvent }
 
 // 6. Be sure to replace every instance of the API keys with these new variables.
 // E.g. if you had:

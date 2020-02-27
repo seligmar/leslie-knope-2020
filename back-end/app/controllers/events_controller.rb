@@ -19,11 +19,17 @@ class EventsController < ApplicationController
     render json: newlist 
 end
 
-  def create 
-    # if (start[0] === '1' || start[0] === '2') {
-    #   let newNum = Number(start[0] + start[1]) - 12
-    #   start = '0' + newNum + ':' + start[3] + start[4]
-    # }
+  def new 
+    new_event = Event.new(title: params[:title], street_address: params[:street_address_1]
+    )
   end 
+
+  private 
+
+   def event_params 
+     params.require(:event).permit(:title, :start_time, 
+      :street_address_1, :city, :state, :zip, 
+      :datetime, lat, :lng)
+   end 
 
 end
