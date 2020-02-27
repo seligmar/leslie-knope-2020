@@ -101,30 +101,29 @@ class NewEventForm extends React.Component {
         month: month,
         year: year
       }
-      console.log(eventData)
       this.getLatLngFromAPI(eventData, newAddress.join('+'))
     }
   }
 
   getLatLngFromAPI = (event, address) => {
-    console.log(google_API_Key)
+    let key = google_API_Key['google_API_Key']
     return fetch(
-      `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${google_API_Key}`
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${key}`
     )
       .then(resp => resp.json())
       .then(resp => console.log(resp))
-    // .then(data => this.parseAPI(event, data))
+      .then(data => this.parseAPI(event, data))
   }
 
-  // parseAPI = (event, data) => {
-  //   const lat = data['results']['0']['geometry']['location']['lat']
-  //   const lng = data['results']['0']['geometry']['location']['lng']
-  //   const coordinates = {
-  //     lat: lat,
-  //     lng: lng
-  //   }
-  //   this.mergeInfo(event, coordinates)
-  // }
+  parseAPI = (event, data) => {
+    const lat = data['results']['0']['geometry']['location']['lat']
+    const lng = data['results']['0']['geometry']['location']['lng']
+    const coordinates = {
+      lat: lat,
+      lng: lng
+    }
+    this.mergeInfo(event, coordinates)
+  }
 
   // mergeInfo = (event, coordinates) => {
   //   const newEvent = Object.assign(event, coordinates)
