@@ -8,8 +8,8 @@ const EventsList = props => {
         <div className='event-div-style' key={event.id}>
           <div className='event-div'>
             <div className='ui fluid card'>
+              <p class='header'>{event.title}</p>
               <div className='class-content'>
-                <p class='header'>{event.title}</p>
                 <img
                   className='ui small right floated image'
                   alt='Warren Yard Sign'
@@ -21,14 +21,13 @@ const EventsList = props => {
                   {event.month} {event.day}, {event.year}
                 </p>
                 <p>
-                  <p> Starting At: </p>
+                  <p>at</p>
                   {event.time} {event.timestamp}
                 </p>
-                {/*  - {event.start_time} on {event.day}/{event.month}/{event.year}</p> */}
-                <p class='description'>{event.street_address}</p>
-                <p class='description'>
+                <div class='description'>{event.street_address}</div>
+                <div class='description'>
                   {event.city}, {event.state} {event.zip}
-                </p>
+                </div>
                 {/* <button className='event-button' onClick={(e) => props.rsvp(e, event.id)}>RSVP!</button> */}
               </div>
             </div>
