@@ -15,6 +15,10 @@
   color: black;
 }
 
+.class-content {
+  text-align: center;
+}
+
 .form-border {
   border-color: #1eb25c;
   border-style: solid;
