@@ -2,6 +2,7 @@ import React, { useDebugValue } from 'react'
 import EventsList from './EventsList'
 import API from '../logIn/API'
 import NewEventForm from './NewEventForm'
+import Map from './Map'
 
 const months = {
   '01': 'January',
