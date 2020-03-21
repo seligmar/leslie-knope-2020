@@ -8,6 +8,7 @@ const EventsList = props => {
         <div className='event-div-style' key={event.id}>
           <div className='event-div'>
             <div className='ui fluid card'>
+              <p class='header'>{event.title}</p>
               <div className='class-content'>
                 <img
                   className='ui small right floated image'
@@ -15,7 +16,6 @@ const EventsList = props => {
                   src='
                   https://cdn.shopify.com/s/files/1/0250/1217/4900/products/p_r_pawneegoddessesbadge_mens_shortsleeve_tshirt_rollover_7_1200x630.jpg?v=1572164280                  '
                 />
-                <p class='header'>{event.title}</p>
                 <p>
                   <p> on </p>
                   {event.month} {event.day}, {event.year}
