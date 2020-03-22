@@ -6,6 +6,7 @@ import {
   Marker
 } from 'react-google-maps'
 import Google_API_Key from './APIKey'
+import './event-list.css'
 
 const URL = `https://maps.googleapis.com/maps/api/js?v=3.esp&libraries=geometry,drawing,places&key=${Google_API_Key}`
 
@@ -29,13 +30,15 @@ const MapOverView = props => {
   const WrappedMap = withScriptjs(withGoogleMap(Map))
 
   return (
-    <div style={{ height: '100vw', width: '100vh' }}>
-      <WrappedMap
-        googleMapURL={URL}
-        loadingElement={<div style={{ height: '100%' }} />}
-        containerElement={<div style={{ height: '100%' }} />}
-        mapElement={<div style={{ height: '100%' }} />}
-      />
+    <div className='map-box'>
+      <div style={{ width: '100%', height: '60vh' }}>
+        <WrappedMap
+          googleMapURL={URL}
+          loadingElement={<div style={{ height: '100%' }} />}
+          containerElement={<div style={{ height: '100%' }} />}
+          mapElement={<div style={{ height: '100%' }} />}
+        />
+      </div>
     </div>
   )
 }
