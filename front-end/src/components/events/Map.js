@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   GoogleMap,
   withScriptjs,
   withGoogleMap,
-  Marker
+  Marker,
+  InfoWindow
 } from 'react-google-maps'
 import Google_API_Key from './APIKey'
 import './event-list.css'
 
 const URL = `https://maps.googleapis.com/maps/api/js?v=3.esp&libraries=geometry,drawing,places&key=${Google_API_Key}`
 
+// video recommends breaking this into multiple functions- to pass in props need to make this one
+// single function. 'Map' is keyword and must be passed into WrappedMap function
+// this doesnt work if this is a class- it needs to remain a basic component
+
 const MapOverView = props => {
+  const [selectedEvent, setSelectedEvent] = useState(null)
   const Map = () => {
     return (
       <GoogleMap
@@ -21,8 +27,31 @@ const MapOverView = props => {
           <Marker
             key={event.id}
             position={{ lat: event.lat, lng: event.lng }}
+            onClick={() => {
+              setSelectedEvent(event)
+            }}
           />
         ))}
+        {selectedEvent ? (
+          <InfoWindow
+            position={{ lat: selectedEvent.lat, lng: selectedEvent.lng }}
+            onCloseClick={() => setSelectedEvent(null)}
+          >
+            <div style={{ color: '#232444' }}>
+              <p>{selectedEvent.title}</p>
+              <p>
+                {selectedEvent.time}
+                {selectedEvent.timestamp} on {selectedEvent.day}
+                {''}
+                {selectedEvent.month}
+                {''}
+                {selectedEvent.year}
+              </p>
+              <p>{selectedEvent.street_address}</p>
+              {selectedEvent.city}, {selectedEvent.state}, {selectedEvent.zip}
+            </div>
+          </InfoWindow>
+        ) : null}
       </GoogleMap>
     )
   }
