@@ -2,7 +2,7 @@ import React, { useDebugValue } from 'react'
 import EventsList from './EventsList'
 import API from '../logIn/API'
 import NewEventForm from './NewEventForm'
-import Map from './Map'
+import MapOverView from './Map'
 
 const months = {
   '01': 'January',
@@ -70,14 +70,12 @@ class Events extends React.Component {
     this.setState({ events })
   }
 
-  // newEvent = () => {
-
-  // }
-
   render () {
     return (
       <div>
-        <Map />
+        {this.state.events.length > 0 ? (
+          <MapOverView events={this.state.events} />
+        ) : null}
         <NewEventForm user={this.props.user} />
         {this.state.events.length > 0 ? (
           <EventsList events={this.state.events} />
