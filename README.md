@@ -111,3 +111,9 @@ https://medium.com/@seligmar/authentication-authorization-eb14cd6f94da
 https://medium.com/@seligmar/authentication-authorization-2-2f62d8dce2ad
 
 https://medium.com/@seligmar/authentication-authorization-3-a6d30488cf47
+
+Valuable considerations for users concerned about security in the app:
+
+https://medium.com/swlh/secure-coding-for-beginners-adf673806e65
+
+https://owasp.org/www-project-top-ten/

@@ -14,6 +14,12 @@ const URL = `https://maps.googleapis.com/maps/api/js?v=3.esp&libraries=geometry,
 // video recommends breaking this into multiple functions- to pass in props need to make this one
 // single function. 'Map' is keyword and must be passed into WrappedMap function
 // this doesnt work if this is a class- it needs to remain a basic component (hence the hook)
+// to change the heart icons on the map back to the standard red google maps pointers remove:
+// icon={{
+//   url:
+//     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png',
+//   scaledSize: new window.google.maps.Size(25, 25)
+// }}
 
 const MapOverView = props => {
   const [selectedEvent, setSelectedEvent] = useState(null)

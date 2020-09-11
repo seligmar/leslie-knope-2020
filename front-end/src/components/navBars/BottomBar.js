@@ -25,6 +25,22 @@ const BottomBar = () => {
         <Link to='/events/leslieknope2020' className='link'>
           <h1>Events</h1>
         </Link>
+        <Link to='https://www.youtube.com/watch?v=flSFozk1E9c' className='link'>
+          <h1>Catch Your Dreams</h1>
+        </Link>
+        <div className='youtube-block-grid'>
+          <div className='youtube'>
+            <iframe
+              width='100%'
+              height='560'
+              src='https://www.youtube.com/embed/flSFozk1E9c'
+              frameBorder='0'
+              title='Catch Your Dreams'
+              allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            />
+          </div>
+        </div>
 
         {/* <Link to='/getinvolved/elizabethwarren2020' className='link'>
             <div className='get-involved-box'>
