@@ -14,8 +14,8 @@ const Lgbtq = () => {
         {/* <div className='image-box-green'> */}
         <img
           className='bio-img-1'
-          src='https://i.imgur.com/1f5zHM9.jpg'
-          alt='Medicare for All'
+          src='https://static.onecms.io/wp-content/uploads/sites/20/2019/06/penguins-2-2000.jpg'
+          alt='Some Penguins Are Gay'
         />
         {/* </div> */}
         <div className='about-page'>

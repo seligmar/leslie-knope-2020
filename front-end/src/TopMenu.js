@@ -12,12 +12,13 @@ const TopMenu = props => {
 
   const dropdown = {
     'background-color': '#ffea00',
-    color: black,
+    color: 'black',
     'font-size': '1.2rem',
     'border-color': '#ffea00',
     'padding-left': '4%',
     'padding-right': '4%'
   }
+
   const dropdown1 = {
     'background-color': '#ffea00',
     color: '#1eb25c',
@@ -33,7 +34,7 @@ const TopMenu = props => {
       <Link to='/leslieknope2020'>
         <button className='button-login'>Home</button>
       </Link>
-      <i class='align justify icon' style={styles} />
+      <i className='align justify icon' style={styles} />
       {/* {props.loggedIn ? ( */}
       <button
         className='button-login'
@@ -50,11 +51,11 @@ const TopMenu = props => {
       </button>
       <LogIn />
       {/* )} */}
-      <div style={dropdown} class='ui compact menu'>
-        <div style={dropdown} class='ui simple dropdown item'>
+      <div style={dropdown} className='ui compact menu'>
+        <div style={dropdown} className='ui simple dropdown item'>
           Issues
           <i class='dropdown icon' />
-          <div style={dropdown1} class='menu'>
+          <div style={dropdown1} className='menu'>
             <div class='item'>
               <Link to='/sex-ed/leslieknope2020'>
                 <div className='button-dropdown'>Sex Ed</div>
