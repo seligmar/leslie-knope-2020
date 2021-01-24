@@ -5,6 +5,8 @@ import { Route, Switch, Link } from 'react-router-dom'
 import Home from './components/Home'
 import SexEd from './components/issues/SexEd'
 import LilSebastian from './components/issues/LilSebastian'
+import JoeBiden from './components/issues/JoeBiden'
+import Lgbtq from './components/issues/Lgbtq'
 import GenderEquaity from './components/issues/GenderEquality'
 import Donate from './components/Donate'
 import Events from './components/events/Events'
@@ -161,6 +163,14 @@ class App extends React.Component {
           <Route
             path='/lilsebastian/leslieknope2020'
             component={routerProps => <LilSebastian {...routerProps} />}
+          />
+          <Route
+            path='/joebiden/leslieknope2020'
+            component={routerProps => <JoeBiden {...routerProps} />}
+          />
+          <Route
+            path='/equality/leslieknope2020'
+            component={routerProps => <Lgbtq {...routerProps} />}
           />
           <Route
             path='/about/leslieknope2020'
