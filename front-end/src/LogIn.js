@@ -1,4 +1,5 @@
 import React from 'react'
+import './login.css'
 
 const LogIn = props => {
   const xButton = {
@@ -20,13 +21,13 @@ const LogIn = props => {
 
   return (
     <div className='login'>
-      <div class='field'>
+      <div className='field'>
         <div className='login-form-border'>
           <form
             // onSubmit={e => props.logIn(e)}
             className='ui form'
           >
-            //{' '}
+            {' '}
             <button
               style={xButton}
               // onClick={() => props.HideLogIn()}
@@ -43,7 +44,7 @@ const LogIn = props => {
               placeholder='password'
             />{' '}
             <div className='buttons-login'>
-              //{' '}
+              {' '}
               <div className='two ui buttons'>
                 {' '}
                 <button className='ui button' style={buttons} type='submit'>

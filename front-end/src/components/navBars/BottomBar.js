@@ -73,33 +73,41 @@ const BottomBar = () => {
       <div className='social-media-grid'>
         <div className='four ui icon buttons'>
           <div className='social-media'>
-            <a href='https://www.facebook.com/leslieknope' target='_blank'>
-              <button style={buttonStyle} class='ui facebook button'>
-                <i class='facebook icon' />
+            <a
+              href='https://www.facebook.com/leslieknope'
+              // target='_blank'
+            >
+              <button style={buttonStyle} className='ui facebook button'>
+                <i className='facebook icon' />
                 Facebook
               </button>
             </a>
-            <a href='https://twitter.com/eagletonhater?lang=en' target='_blank'>
-              <button style={buttonStyle} class='ui twitter button'>
-                <i class='twitter icon' />
+            <a
+              href='https://twitter.com/eagletonhater?lang=en'
+              // target='_blank'
+            >
+              <button style={buttonStyle} className='ui twitter button'>
+                <i className='twitter icon' />
                 Twitter
               </button>
             </a>
             <a
               href='https://www.instagram.com/councilwoman_knope/?hl=en'
-              target='_blank'
+              // target='_blank'
+              // rel='noopener nonreferrer'
             >
-              <button style={buttonStyle} class='ui instagram button'>
-                <i class='instagram icon' />
+              <button style={buttonStyle} className='ui instagram button'>
+                <i className='instagram icon' />
                 Instagram
               </button>
             </a>
             <a
               href='https://www.youtube.com/user/nbcParksandRec'
-              target='_blank'
+              // target='_blank'
+              // rel='noopener nonreferrer'
             >
-              <button style={buttonStyle} class='ui  youtube button'>
-                <i class='youtube icon' />
+              <button style={buttonStyle} className='ui  youtube button'>
+                <i className='youtube icon' />
                 YouTube
               </button>
             </a>

@@ -8,7 +8,7 @@ class Home extends React.Component {
     return (
       <div>
         <Link to='/donate/leslieknope2020' style={{ textDecoration: 'none' }}>
-          <div className='donationsBar'>
+          <div className='donations-bar'>
             <h1 className='giving-text'>Give Now</h1>
           </div>
         </Link>
@@ -17,7 +17,7 @@ class Home extends React.Component {
             className='react-player'
             url='https://media.giphy.com/media/xRfxdozZr2zYI/giphy.mp4'
             playing='true'
-            loop={'true'}
+            loop='true'
             width='100%'
             height='70%'
           />
