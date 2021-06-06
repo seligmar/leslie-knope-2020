@@ -117,3 +117,9 @@ Valuable considerations for users concerned about security in the app:
 https://medium.com/swlh/secure-coding-for-beginners-adf673806e65
 
 https://owasp.org/www-project-top-ten/
+
+Swipe on app?
+https://github.com/oliviertassinari/react-swipeable-views
+
+Grid system?
+https://github.com/sealninja/react-grid-system
